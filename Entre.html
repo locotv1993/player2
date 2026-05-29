@@ -1,27 +1,30 @@
 <script>
+
 const params = new URLSearchParams(window.location.search);
 const canal = params.get("canal");
 
-if (canal) {
+if(canal){
 
-  const player =
+    const videoUrl =
     "https://la14hd.com/vivo/canales.php?stream=" + canal;
 
-  // Si tienes reproductor nativo Android
-  if (window.PlayerApp && PlayerApp.onPlay) {
+    // ANDROID APP
+    if(window.PlayerApp){
 
-    PlayerApp.onPlay(
-      canal,     // título
-      player,    // URL
-      "",        // imagen opcional
-      ""         // headers opcionales
-    );
+        PlayerApp.onPlay(
+            canal,
+            videoUrl,
+            "",
+            ""
+        );
 
-  } else {
+    } else {
 
-    // Web normal
-    window.location.href = player;
+        // WEB NORMAL
+        location.href = videoUrl;
 
-  }
+    }
+
 }
+
 </script>
