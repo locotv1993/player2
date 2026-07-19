@@ -3,1763 +3,331 @@
     
     {
       "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Eliteserien",
-      "title": "Kristiansund - Sarpsborg 08",
-      "url": "https://www.vdocity.com/_2zwCThgrZchooB5vm32WzyQoE"
+      "time": "04:00 UTC -5",
+      "category": "HANDBALL",
+      "info": "European Championship",
+      "title": "Croatia U20 - Israel U20",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkyBQ2CD7g6xAe"
     },
     {
       "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Eliteserien",
-      "title": "Lillestrom - KFUM Oslo",
-      "url": "https://www.vdocity.com/_2zwkCPdu78XGcbuVY9tQpbUmD"
+      "time": "04:00 UTC -5",
+      "category": "HANDBALL",
+      "info": "European Championship",
+      "title": "North Macedonia U20 - Serbia U20",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkyvDYPmmJNcf5"
     },
     {
       "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Eliteserien",
-      "title": "Start - Rosenborg",
-      "url": "https://www.vdocity.com/_2zxHw5Lc4XyXwh46rbawAkFJR"
+      "time": "04:00 UTC -5",
+      "category": "HANDBALL",
+      "info": "European Championship",
+      "title": "Portugal U20 - Norway U20",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkzf34bLQveH9W"
     },
     {
       "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Finland Veikkausliiga",
-      "title": "AC Oulu - Gnistan",
-      "url": "https://www.vdocity.com/_2zxqfm3K2g7abnp76RpZCVcVZ"
-    },
-    {
-      "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Finland Veikkausliiga",
-      "title": "SJK - KuPS",
-      "url": "https://www.vdocity.com/_2zyPQSk1z5Zqvt7uysHUamsiM"
-    },
-    {
-      "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Finland Ykkosliiga",
-      "title": "KTP - PK-35",
-      "url": "https://www.vdocity.com/_2zz1xT5vc3PLP9jVhAsy2LBWw"
-    },
-    {
-      "date": "",
-      "time": "09:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Celtic - Middlesbrough",
-      "url": "https://www.vdocity.com/_fxiVxfuvtEx1UMc7ptCpE6NKYPD"
-    },
-    {
-      "date": "",
-      "time": "09:00 UTC -5",
-      "category": "RUGBY",
-      "info": "Super League",
-      "title": "Warrington Wolves - Hull KR",
-      "url": "https://www.vdocity.com/_g6QbJdmwPbCU2LAohsgVdVwT1dT"
-    },
-    {
-      "date": "",
-      "time": "09:00 UTC -5",
-      "category": "RUGBY",
-      "info": "World Championship",
-      "title": "New Zealand U20 - England U20",
-      "url": "https://www.vdocity.com/_g6bFa4LGWCJZ2uAiKJoKKvQJKzB"
-    },
-    {
-      "date": "",
-      "time": "09:00 UTC -5",
+      "time": "04:00 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Istanbul Valdmannova - Tararudee",
-      "url": "https://www.vdocity.com/_5rKNSvpEhHRBQHXuP6517soBSvqVvZ7At"
+      "title": "WTA Prague Open - Arena Gao - Fruhvirtova",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBqbMiRYANkMrH"
     },
     {
       "date": "",
-      "time": "09:00 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "F1",
-      "title": "Formula 1 Belgian Grand Prix Qualifying",
-      "url": "https://www.vdocity.com/_g6jdXQLHTQ4Vu3j1KWqpi1c2uyU"
-    },
-    {
-      "date": "",
-      "time": "09:10 UTC -5",
+      "time": "04:00 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Iasi Sherif - Oliynykova",
-      "url": "https://www.vdocity.com/_5rJAhDPbj39hYm7MiN2gm4MLfwn24hmDn"
+      "title": "WTA Prague Open - Court 1 Ryser - Hontama",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBrLBEd6p122Li"
     },
     {
       "date": "",
-      "time": "09:20 UTC -5",
+      "time": "04:00 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Prague Open - Court 1 Bervid - Saigo",
-      "url": "https://www.vdocity.com/_5rPAJ18DPXiupxnxJHRdrgMhSdtzaMrgT"
+      "title": "WTA Prague Open - Court 2 Hon - Lee",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBs4zkpfTdHgq9"
     },
     {
       "date": "",
-      "time": "09:25 UTC -5",
+      "time": "04:30 UTC -5",
       "category": "TENNIS",
       "info": "ATP",
-      "title": "ATP Bastad Rublev - Tabilo",
-      "url": "https://www.vdocity.com/_5rGxwVxxnQhqcjjSibStsyz6Tt2UV3Vt8"
+      "title": "ATP Gstaad Tsitsipas - Collignon",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCn8ahbsWHAbBsnuh"
     },
     {
       "date": "",
-      "time": "09:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Swansea City - Holstein Kiel",
-      "url": "https://www.vdocity.com/_E8mcpSesGRXwfi6SpmQyvyu5omMkpH"
+      "time": "04:30 UTC -5",
+      "category": "TENNIS",
+      "info": "WTA",
+      "title": "WTA Kitzbuhel Grabher - Kraus",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBsopH2E7FZgng"
     },
     {
       "date": "",
-      "time": "09:30 UTC -5",
-      "category": "RUGBY",
-      "info": "World Nations Cup",
-      "title": "Samoa - Romania",
-      "url": "https://www.vdocity.com/_E8qCKAWTKxjvimCzyJjdejnZ6rewry"
+      "time": "05:00 UTC -5",
+      "category": "CYCLING",
+      "info": "UCI",
+      "title": "Tour de France: Stage 15",
+      "url": "https://www.vdocity.com/_2UbEamZvh72YBZXetbA6WWzCKeevEypkeXCk"
     },
     {
       "date": "",
-      "time": "09:30 UTC -5",
+      "time": "05:20 UTC -5",
       "category": "VOLLEYBALL",
       "info": "Nations League",
-      "title": "Turkey - Slovenia",
-      "url": "https://www.vdocity.com/_E8tmyxMqW87QphYGpRSvhSA9Xc7YWQ"
+      "title": "Japan - Argentina",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTm1Pranu4Yuwdw"
     },
     {
       "date": "",
-      "time": "09:30 UTC -5",
+      "time": "05:30 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Prague Open - Arena Podrez - Krejcova",
-      "url": "https://www.vdocity.com/_5rMxYHhkWub9BHWjbTRP4Gt44sdfUu5B1"
+      "title": "WTA Prague Open - Arena Salkova - Knutson",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBqbMiRYANkhKT"
     },
     {
       "date": "",
-      "time": "09:35 UTC -5",
+      "time": "05:30 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Athens Lumsden/Tang - Jiang/Wu",
-      "url": "https://www.vdocity.com/_5rFmBmzp4VgEHLS2rmKjgivKizRNsSmiM"
+      "title": "WTA Prague Open - Court 1 Podrez - Saigo",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBrLBEd6p12Mot"
     },
     {
       "date": "",
-      "time": "09:50 UTC -5",
+      "time": "05:30 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Prague Open - Court 2 Morvayova - Aksu",
-      "url": "https://www.vdocity.com/_5rQN66sraFb7JHBXaHH33L9reSWNLhbvP"
+      "title": "WTA Prague Open - Court 2 Costoulas - Aksu",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBs4zkpfTdJ2JK"
     },
     {
       "date": "",
-      "time": "10:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Manchester United - Wrexham",
-      "url": "https://www.vdocity.com/_EMKE2bsrEsdXkQ8wtbi9LGfxZJM2zs"
-    },
-    {
-      "date": "",
-      "time": "10:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Oberhausen - Borussia Dortmund",
-      "url": "https://www.vdocity.com/_EMNohPjbfvNViVj1QGX8FL8ajFT1Ud"
-    },
-    {
-      "date": "",
-      "time": "10:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Moldova",
-      "title": "Dacia Buiucani - Politehnica UTM",
-      "url": "https://www.vdocity.com/_EMSPNDCoU1EgENQhfvCwn3PkgbHf1V"
-    },
-    {
-      "date": "",
-      "time": "10:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Superettan",
-      "title": "Oster - Brage",
-      "url": "https://www.vdocity.com/_EMVy314BeAcALHhn2oVeaXuWn5K6h3"
-    },
-    {
-      "date": "",
-      "time": "10:00 UTC -5",
-      "category": "TENNIS",
-      "info": "ATP",
-      "title": "UTS Championship Rio Griekspoor - Norrie",
-      "url": "https://www.vdocity.com/_5rLaCeEsdus3LKG38VtPB99ZNAeV7PAmQ"
-    },
-    {
-      "date": "",
-      "time": "10:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Ireland FAI Cup",
-      "title": "Janesboro - Sligo Rovers",
-      "url": "https://www.vdocity.com/_EMZYhnuZu9JHdtbR73PzFHFVzJEL8w"
-    },
-    {
-      "date": "",
-      "time": "10:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Liga AUF Uruguaya",
-      "title": "Progreso - Maldonado",
-      "url": "https://www.vdocity.com/_EMd8Nakx5Jfmjpvgx9QgCFmhsGQ2QH"
-    },
-    {
-      "date": "",
-      "time": "10:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Romania",
-      "title": "Otelul - CFR Cluj",
-      "url": "https://www.vdocity.com/_EMhFZ9tuzsQUu8333Kr4crag7tSRto"
-    },
-    {
-      "date": "",
-      "time": "10:30 UTC -5",
-      "category": "TENNIS",
-      "info": "WTA",
-      "title": "WTA Istanbul Zakharova - Vandewinkel",
-      "url": "https://www.vdocity.com/_5rKNSvpEhHRBQHXuP6517soBSvqVvZSen"
-    },
-    {
-      "date": "",
-      "time": "10:30 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "IndyCar",
-      "title": "Indy NXT Music City Grand Prix Practice",
-      "url": "https://www.vdocity.com/_EMkqDwjnCM3mrGfEi4uYNMFkfE85UU"
-    },
-    {
-      "date": "",
-      "time": "10:30 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "Speedway",
-      "title": "Individual Speedway European Championship: Zielona Gora",
-      "url": "https://www.vdocity.com/_EMpR1qR2r4mUCkzVmJ8Uq5YwQ47eiv"
-    },
-    {
-      "date": "",
-      "time": "10:40 UTC -5",
-      "category": "RUGBY",
-      "info": "Nations Championship",
-      "title": "South Africa - Wales",
-      "url": "https://www.vdocity.com/_EMszgdGR2E8xJhKmcQqmsmvXoQ2vsR"
-    },
-    {
-      "date": "",
-      "time": "10:40 UTC -5",
-      "category": "TENNIS",
-      "info": "WTA",
-      "title": "WTA Iasi Badosa - Zidansek",
-      "url": "https://www.vdocity.com/_5rJAhDPbj39hYm7MiN2gm4MLfwn24i6hg"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Villa San Carlos - Deportivo Camioneros",
-      "url": "https://www.vdocity.com/_EQLfoJJkekpG8Zo3emgGV7hJVxAfsW"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Bulgaria",
-      "title": "Septemvri Sofia - Arda",
-      "url": "https://www.vdocity.com/_EQQFU6A8pvBkHkXuZnPBfuw7vvQqK8"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Eliteserien",
-      "title": "Molde - Brann",
-      "url": "https://www.vdocity.com/_EQT4hEuymTd1fdmA8qFogAGxBofPcG"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Eliteserien",
-      "title": "Viking - Sandefjord",
-      "url": "https://www.vdocity.com/_EQWeN2mMwczVmaq7mGyfQUrvgcRUZM"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Brest - Concarneau",
-      "url": "https://www.vdocity.com/_EQaDrkcx1ACUpdwfupoquHuo9bV3c3"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Servette - St Etienne",
-      "url": "https://www.vdocity.com/_EQdoXYULBKZxvaGwkwX8yU18X4APF6"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Iceland",
-      "title": "Thor Akureyri - Vikingur Reykjavik",
-      "url": "https://www.vdocity.com/_Ed4FaBzLv565rGscq7HZh5dR7kJQ5g"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Ireland FAI Cup",
-      "title": "Baldoyle Utd. - Longford",
-      "url": "https://www.vdocity.com/_Ed7qEyr6M7q3pNTgLn6Yc963HhdULk"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Latvia Virsliga",
-      "title": "Riga FC - Tukums 2000",
-      "url": "https://www.vdocity.com/_EdBQuoKJ9ChELF9NcRnN6mTnNf2iRM"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Lithuania",
-      "title": "Kauno Zalgiris - FA Siauliai",
-      "url": "https://www.vdocity.com/_EdEzabAgKN4iSASSyK54uFyYU8q4Kb"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "NWSL",
-      "title": "Gotham W - Seattle Reign W",
-      "url": "https://www.vdocity.com/_EdJaFP24aLkqjmL63YG4f9FPBkSYxB"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Peru",
-      "title": "Moquegua - Comerciantes Unidos",
-      "url": "https://www.vdocity.com/_EdN9vAsSkW8KqhfMteyMhqcycVu9bb"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Scotland League Cup",
-      "title": "Aberdeen - Queen's Park",
-      "url": "https://www.vdocity.com/_EdSH6k1Qg4s2zzmhyqQk8SRws7wZ67"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Slovenia",
-      "title": "Radomlje - Grosuplje",
-      "url": "https://www.vdocity.com/_EdVrmXrGsYWKx9PueaUDuQpmMAXUBJ"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Pittsburgh Riverhounds SC - Louisville City FC",
-      "url": "https://www.vdocity.com/_EdZSZRXXXGE2JdjAhohu9ocy67dcMX"
-    },
-    {
-      "date": "",
-      "time": "11:00 UTC -5",
-      "category": "TENNIS",
-      "info": "ATP",
-      "title": "UTS Championship RioMiguel - Cerundolo",
-      "url": "https://www.vdocity.com/_5rLaCeEsdus3LKG38VtPB99ZNAeV7PAmT"
-    },
-    {
-      "date": "",
-      "time": "11:30 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "NASCAR",
-      "title": "NASCAR Truck Series Race: FaithFest 250",
-      "url": "https://www.vdocity.com/_Edd2EDNuhRbWQa4SYvRCCVzZVTYtVy"
-    },
-    {
-      "date": "",
-      "time": "11:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Russia Super Cup",
-      "title": "Zenit - Spartak Moscow",
-      "url": "https://www.vdocity.com/_Eg5hLtRFKxGpESXibHFgnN3bFJTtWT"
-    },
-    {
-      "date": "",
-      "time": "11:30 UTC -5",
-      "category": "RUGBY",
-      "info": "Super League",
-      "title": "Hull FC - Leigh",
-      "url": "https://www.vdocity.com/_Eg9H1gGdW7eJPdGaWHxbyAHQgGi3x2"
-    },
-    {
-      "date": "",
-      "time": "11:30 UTC -5",
-      "category": "RUGBY",
-      "info": "World Championship",
-      "title": "France U20 - South Africa U20",
-      "url": "https://www.vdocity.com/_EgC6Eq2USf5ZmWVq5LqDztLyssBME8"
-    },
-    {
-      "date": "",
-      "time": "11:30 UTC -5",
-      "category": "TENNIS",
-      "info": "WTA",
-      "title": "WTA Athens Sakkari - Korneeva",
-      "url": "https://www.vdocity.com/_5rFmBmzp4VgEHLS2rmKjgivKizRNsSmj8"
-    },
-    {
-      "date": "",
-      "time": "11:45 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Cadiz CF - Orlando Pirates",
-      "url": "https://www.vdocity.com/_EgFfucsrcpT3sTZnho3sibbLYSuikJ"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "NK Osijek - Honved",
-      "url": "https://www.vdocity.com/_EgKFQLjSgMf2vWgLrLNXSMUoqYCuo3"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "SK Rapid - Hamburger SV",
-      "url": "https://www.vdocity.com/_EgNq58aprX2X2T1chT5pSxxyPuE6zC"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Slavia Prague - Lyon",
-      "url": "https://www.vdocity.com/_EtoH7n6qbGYdx9cHmcrFAabFzbbDc6"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Moldova",
-      "title": "Zimbru Chisinau - Real Sireti",
-      "url": "https://www.vdocity.com/_EtrrnZxb2KHbvFCMHHfE5e3tAYhXaZ"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "RUGBY",
-      "info": "World Nations Cup",
-      "title": "Uruguay - Hong Kong",
-      "url": "https://www.vdocity.com/_EtvSTPRnpQ9nS7t3YvfBPwTHFi8F4d"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "TENNIS",
-      "info": "ATP",
-      "title": "ATP Umag Merida Aguilar - Dzumhur",
-      "url": "https://www.vdocity.com/_5rEZS4a3ykgZPuP3ehXf376bG74WHWBog"
-    },
-    {
-      "date": "",
-      "time": "12:00 UTC -5",
-      "category": "TENNIS",
-      "info": "ATP",
-      "title": "UTS Championship RioKyrgios - Nakashima",
-      "url": "https://www.vdocity.com/_5rLaCeEsdus3LKG38VtPB99ZNAeV7PWEb"
-    },
-    {
-      "date": "",
-      "time": "12:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Game 1: Pittsburgh Pirates vs. Cleveland Guardians [away feed]",
-      "url": "https://www.vdocity.com/_Etz28BHAzZXGY3B7uowtCRy3MBvvTe"
-    },
-    {
-      "date": "",
-      "time": "12:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Game 1: Pittsburgh Pirates vs. Cleveland Guardians [home feed]",
-      "url": "https://www.vdocity.com/_Eu3bny8ZFYDPqe4kz3qUysKQsoxWaj"
-    },
-    {
-      "date": "",
-      "time": "12:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Israel Toto Cup",
-      "title": "Beitar Jerusalem - Hapoel Tel Aviv",
-      "url": "https://www.vdocity.com/_Eu7BTkywRhaswaQ2qAYn2Zh1JZ6djw"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "BOXING",
-      "info": "Event",
-      "title": "BKFC 91 Naples",
-      "url": "https://www.vdocity.com/_EuBJeL7uMGKb6sWNvLzATAVyZB93ET"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Argentino de Merlo - Deportivo Armenio",
-      "url": "https://www.vdocity.com/_EuEtK7xmYjxt428ab63eCfB46WpgpE"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Arsenal Sarandi - Flandria",
-      "url": "https://www.vdocity.com/_EuJU71e2CTgaQWTqeKGafPUEqM8jYt"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Excursionistas - Argentino de Quilmes",
-      "url": "https://www.vdocity.com/_EuN3moVQNd44WSo7VRysjZZaBQGkgy"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Laferrere - Ituzaingo",
-      "url": "https://www.vdocity.com/_EwpitUXk19jNLKGPXnpNKRcbwFBkhR"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Liniers - Dep. Merlo",
-      "url": "https://www.vdocity.com/_EwtJZGP8BK6rVW1FSoXHWDrRNDSFc8"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Real Pilar - Dock Sud",
-      "url": "https://www.vdocity.com/_Eww7nR8y7rY7sPEW1ruSFSUDvc1Syt"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "San Martin Burzaco - Sportivo Italiano",
-      "url": "https://www.vdocity.com/_EwzhTCzMJ1ubyLJTeJdJ1qwdHoCwPE"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Talleres - Brown Adrogue",
-      "url": "https://www.vdocity.com/_Ex4GwvqwMZ7b2PR1nqwwm5YqXbwyCu"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "UAI Urquiza - CSD Comunicaciones",
-      "url": "https://www.vdocity.com/_Ex7rcihKXiV58KkHdxfEomvRxMQZrK"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Argentina Primera B",
-      "title": "Villa Dalmine - Defensores Unidos",
-      "url": "https://www.vdocity.com/_FAYJfNDLGU1C42Lxi8RfXPYiZ3Yagu"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Copa Paulista",
-      "title": "Paulista - Primavera",
-      "url": "https://www.vdocity.com/_FAbtLA55hWkA27w2DnY3Lj9xBDMeme"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Zulte-Waregem - AZ Alkmaar",
-      "url": "https://www.vdocity.com/_FAfTzyYHVbcLXzciVSDrsSR88ZCJJW"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "NWSL",
-      "title": "Denver Summit W - Portland Thorns W",
-      "url": "https://www.vdocity.com/_FAj3fmPffkypduunrKWZfvvtE2zeCk"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Scotland League Cup",
-      "title": "Dundee United - Arbroath",
-      "url": "https://www.vdocity.com/_FAndLZF3vjfwwWoRvZQAVTAgd39AHt"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Serbia",
-      "title": "Novi Pazar - Radnicki 1923",
-      "url": "https://www.vdocity.com/_FArD1M6S6u3S3T8hmg7TY9YH3nc6S1"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Serbia",
-      "title": "Zemun - Partizan Belgrade",
-      "url": "https://www.vdocity.com/_FAvLBvEQ2Tn9CkF3rrZamta1FEezs2"
-    },
-    {
-      "date": "",
-      "time": "13:00 UTC -5",
+      "time": "06:00 UTC -5",
       "category": "VOLLEYBALL",
       "info": "Nations League",
-      "title": "Serbia - Germany",
-      "url": "https://www.vdocity.com/_FAyuri5GDwRS9tsFXbd4XPF5naLeSn"
+      "title": "Turkey - Iran",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTm28g6zTiBBc7S"
     },
     {
       "date": "",
-      "time": "13:00 UTC -5",
+      "time": "06:00 UTC -5",
+      "category": "GOLF",
+      "info": "PGA Tour",
+      "title": "The Open Championship",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkLGRzE4gQbmf5"
+    },
+    {
+      "date": "",
+      "time": "06:30 UTC -5",
+      "category": "HANDBALL",
+      "info": "European Championship",
+      "title": "Austria U20 - Faroe Islands U20",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkM1FWRdL2sS9X"
+    },
+    {
+      "date": "",
+      "time": "06:30 UTC -5",
+      "category": "HANDBALL",
+      "info": "European Championship",
+      "title": "France U20 - Germany U20",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkMk52dByf96dx"
+    },
+    {
+      "date": "",
+      "time": "06:30 UTC -5",
+      "category": "HANDBALL",
+      "info": "European Championship",
+      "title": "Romania U20 - Iceland U20",
+      "url": "https://www.vdocity.com/_E5dn9od6ziuwcczLTkNUtYpkdHQm8P"
+    },
+    {
+      "date": "",
+      "time": "07:00 UTC -5",
       "category": "TENNIS",
       "info": "ATP",
-      "title": "UTS Championship RioFonseca - Moutet",
-      "url": "https://www.vdocity.com/_5rLaCeEsdus3LKG38VtPB99ZNAeV7PWEc"
+      "title": "ATP Bastad Rublev - Darderi",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtCVyxnnottoCo2"
     },
     {
       "date": "",
-      "time": "13:00 UTC -5",
+      "time": "07:00 UTC -5",
       "category": "TENNIS",
       "info": "WTA",
-      "title": "WTA Athens Tauson - Krejcikova",
-      "url": "https://www.vdocity.com/_5rFmBmzp4VgEHLS2rmKjgivKizRNsT7CH"
+      "title": "WTA Iasi Charaeva/Kulambayeva - Detiuc/Khromacheva",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtCWinJzNYX4sJ8"
     },
     {
       "date": "",
-      "time": "13:00 UTC -5",
+      "time": "07:00 UTC -5",
       "category": "DARTS",
       "info": "PDC",
       "title": "World Matchplay Darts",
-      "url": "https://www.vdocity.com/_FB3VebkWsf98WPCWapqzz7YGXQe2Dc"
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynZUnd6Hnom5avo"
     },
     {
       "date": "",
-      "time": "13:15 UTC -5",
-      "category": "SOCCER",
-      "info": "Bulgaria",
-      "title": "Ludogorets - Lokomotiv Plovdiv",
-      "url": "https://www.vdocity.com/_FB75KPbu3pWccKXnRwZJ2ourvkZyKs"
+      "time": "08:00 UTC -5",
+      "category": "AMERICAN FOOTBALL",
+      "info": "AFLE",
+      "title": "Panthers Wroclaw - Firenze Red Lions",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynZVXScVMTPMFRE"
     },
     {
       "date": "",
-      "time": "13:15 UTC -5",
-      "category": "SOCCER",
-      "info": "Peru",
-      "title": "AD Tarma - Universitario de Deportes",
-      "url": "https://www.vdocity.com/_FDZkS4eEgMBvSC14UJtaZyjqyz1rST"
-    },
-    {
-      "date": "",
-      "time": "13:15 UTC -5",
-      "category": "SOCCER",
-      "info": "Romania",
-      "title": "Universitatea Craiova - UTA Arad",
-      "url": "https://www.vdocity.com/_FDdL6rVcrWZQbNjvPKbVnFhQMfUksi"
-    },
-    {
-      "date": "",
-      "time": "13:15 UTC -5",
-      "category": "SOCCER",
-      "info": "Slovenia",
-      "title": "Olimpija Ljubljana - Bravo",
-      "url": "https://www.vdocity.com/_FDg9L1FTo3zfyFyAxNU7nW3EcYjKAr"
-    },
-    {
-      "date": "",
-      "time": "13:20 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Minnesota Twins vs. Chicago Cubs [away feed]",
-      "url": "https://www.vdocity.com/_FDjizo6qyDNA5D38apByYuWdyk9uMW"
-    },
-    {
-      "date": "",
-      "time": "13:20 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Minnesota Twins vs. Chicago Cubs [home feed]",
-      "url": "https://www.vdocity.com/_FDoJVWxS2ka98G9gjMWdEaWgQT1gwy"
-    },
-    {
-      "date": "",
-      "time": "13:30 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "KSW 120: Haratyk vs. Lesko 2",
-      "url": "https://www.vdocity.com/_FDrtAJopCuwdECUxaUDvHGtGqCUHbP"
-    },
-    {
-      "date": "",
-      "time": "13:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Braga - Celta Vigo",
-      "url": "https://www.vdocity.com/_FiD6kwcf29tvqfP8jLefWErBfKgv5H"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "BOXING",
-      "info": "Event",
-      "title": "Harlem Eubank vs. David Papot",
-      "url": "https://www.vdocity.com/_5wc3e48esX7hwsmyEoasnn4sT8ZPcafnP"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Bolivia",
-      "title": "Always Ready - Universitario de Vinto",
-      "url": "https://www.vdocity.com/_5wdFPmZHp9ZZsuW6zDQFqLBtbdsQCfLYs"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Brazil Serie B",
-      "title": "Criciuma - Vila Nova FC",
-      "url": "https://www.vdocity.com/_5wedjR2Ah9HfiskoTAhcg8d5gJ8vJZBob"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Brazil Serie B",
-      "title": "Ponte Preta - Goias",
-      "url": "https://www.vdocity.com/_5wfqV8SdZmRSNZ329zhsUXMua4PsTJbXN"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Brazil Serie B",
-      "title": "Sport Recife - Operario-PR",
-      "url": "https://www.vdocity.com/_5wh3HECGkVHdqsRbRzZGefdHz65Nb8Ty4"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Canada",
-      "title": "Cavalry - HFX Wanderers",
-      "url": "https://www.vdocity.com/_5wiF2wcuh7jVmu9jBQNehvErRKoadpvEQ"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
+      "time": "08:00 UTC -5",
       "category": "SOCCER",
       "info": "Copa Paulista",
-      "title": "Comercial - Noroeste",
-      "url": "https://www.vdocity.com/_5xYAZAw4ZQ4fUUZj83ES3TGtbjq6Y4FuV"
+      "title": "EC Sao Bernardo - Santo Andre",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynZWGG8gv71cuuh"
     },
     {
       "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Ecuador",
-      "title": "Deportivo Cuenca - CD Universidad Catolica",
-      "url": "https://www.vdocity.com/_5xZNJtMhW2WXRbaKRYcXAq513avw7fz3X"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Liga AUF Uruguaya",
-      "title": "Penarol - Boston River",
-      "url": "https://www.vdocity.com/_5xaK8oKP6VmDVSrt4VWDCnpnXPG35Z1gU"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "RUGBY",
-      "info": "Super League",
-      "title": "Toulouse Olympique - York RLFC",
-      "url": "https://www.vdocity.com/_5xbWtWk238D5RUqMQ1gpwTnDJiMm7Roez"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
-      "category": "RUGBY",
-      "info": "World Nations Cup",
-      "title": "Chile - Georgia",
-      "url": "https://www.vdocity.com/_5xdvLZS8BwEggE7vdHfrCp7rzT5W4ierq"
-    },
-    {
-      "date": "",
-      "time": "14:00 UTC -5",
+      "time": "08:00 UTC -5",
       "category": "MOTORSPORT",
-      "info": "IndyCar",
-      "title": "IndyCar Series Music City Grand Prix Qualifying",
-      "url": "https://www.vdocity.com/_EMkqDwjnCM3mrGfEi4uYNMFkfDqcst"
+      "info": "F1",
+      "title": "Formula 1 Belgian Grand Prix Race [english]",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynZX15etUkdtaQ5"
     },
     {
       "date": "",
-      "time": "14:07 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Chicago White Sox vs. Toronto Blue Jays [away feed]",
-      "url": "https://www.vdocity.com/_62oupKCtLE5cV5sBN8MVzcnn5LT56pJ3w"
+      "time": "08:00 UTC -5",
+      "category": "MOTORSPORT",
+      "info": "F1",
+      "title": "Formula 1 Belgian Grand Prix Race [spanish]",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynYq8qY85isJjwk"
     },
     {
       "date": "",
-      "time": "14:07 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Chicago White Sox vs. Toronto Blue Jays [home feed]",
-      "url": "https://www.vdocity.com/_62q7a2deQy5HNWvAaC9aeDsh4DjAYK8du"
+      "time": "08:00 UTC -5",
+      "category": "MOTORSPORT",
+      "info": "F1",
+      "title": "Formula 1 Belgian Grand Prix Race [polish]",
+      "url": "https://www.vdocity.com/_2UbEamZvh72YBZXetbA6WXEb6VS4hfiBsyN7"
     },
     {
       "date": "",
-      "time": "14:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Cincinnati Reds vs. Colorado Rockies [away feed]",
-      "url": "https://www.vdocity.com/_62rKKkbo8t6thvDaS2GjqUCeK7B5ojjv8"
+      "time": "09:00 UTC -5",
+      "category": "SOCCER",
+      "info": "Copa Paulista",
+      "title": "Osasco Sporting - Juventus-SP",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynYqsf4KeNVaQSv"
     },
     {
       "date": "",
-      "time": "14:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Cincinnati Reds vs. Colorado Rockies [home feed]",
-      "url": "https://www.vdocity.com/_62sX5U2S5WYkdwbVRnrXjES6auxFUMWJe"
+      "time": "09:00 UTC -5",
+      "category": "SOCCER",
+      "info": "Friendly",
+      "title": "Rudes - Shakhtar Donetsk",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynYrcUaXD27r4wM"
     },
     {
       "date": "",
-      "time": "14:10 UTC -5",
-      "category": "RUGBY",
-      "info": "Nations Championship",
-      "title": "Argentina - England",
-      "url": "https://www.vdocity.com/_62tiqBT53kpEVU236Wtr5LY2mYejri3ak"
-    },
-    {
-      "date": "",
-      "time": "14:15 UTC -5",
+      "time": "09:00 UTC -5",
       "category": "SOCCER",
       "info": "Iceland",
-      "title": "Valur - Fram",
-      "url": "https://www.vdocity.com/_62uvatshzPG6RVkAqviE8bG7Z1vRqeDGK"
+      "title": "Vestmannaeyjar - KA Akureyri",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynYsMJ6imfk84ts"
     },
     {
       "date": "",
-      "time": "14:30 UTC -5",
-      "category": "BASKETBALL",
-      "info": "Canada CEBL",
-      "title": "Niagara River Lions - Edmonton Stingers",
-      "url": "https://www.vdocity.com/_62wJvYLasNzCGTzsJt1ayPhLiZcpKyTxM"
-    },
-    {
-      "date": "",
-      "time": "15:00 UTC -5",
-      "category": "AMERICAN FOOTBALL",
-      "info": "CFL",
-      "title": "Montreal Alouettes vs. Calgary Stampeders",
-      "url": "https://www.vdocity.com/_2h4nPMjr9NcNfvWbqYS2ZA96AUaJn38ZihqW"
-    },
-    {
-      "date": "",
-      "time": "15:00 UTC -5",
+      "time": "09:00 UTC -5",
       "category": "SOCCER",
-      "info": "NSL",
-      "title": "AFC Toronto W - Vancouver Rise W",
-      "url": "https://www.vdocity.com/_2h5Bq54jzpwHmwvzNHp31GPoRc5Pa2jsZK7m"
+      "info": "Latvia Virsliga",
+      "title": "Ogre United - BFC Daugavpils",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynYt67cvLKNPjPJ"
     },
     {
       "date": "",
-      "time": "15:00 UTC -5",
+      "time": "09:00 UTC -5",
       "category": "SOCCER",
-      "info": "NWSL",
-      "title": "Bay FC W - North Carolina Courage W",
-      "url": "https://www.vdocity.com/_2h5bFyvo8rhb6y8u8M34TiEHD5X6wpTpU8Ju"
+      "info": "Romania",
+      "title": "U. Cluj - Farul Constanta",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCynYtpw97txzfPsj"
     },
     {
       "date": "",
-      "time": "15:05 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "New York Mets vs. Philadelphia Phillies [away feed]",
-      "url": "https://www.vdocity.com/_2hMgsRC5tMiHQd16PZVPoZhamQGUpFsZ3zou"
-    },
-    {
-      "date": "",
-      "time": "15:05 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "New York Mets vs. Philadelphia Phillies [home feed]",
-      "url": "https://www.vdocity.com/_2hN6JL492PUak1TsRpCc7w3h91S1PN9u2TgH"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Baltimore Orioles vs. Houston Astros [away feed]",
-      "url": "https://www.vdocity.com/_2hNQiRkeDxKB5bhpiXmVQLVpL3tiNESDiLmD"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Baltimore Orioles vs. Houston Astros [home feed]",
-      "url": "https://www.vdocity.com/_2hNp9LchMz5UQczYoECCA14mLBmaefHhDF9z"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Miami Marlins vs. Milwaukee Brewers [away feed]",
-      "url": "https://www.vdocity.com/_2hPDZ7bHR3YoALewwRKeY6JC6WU9jmxxsfG6"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Miami Marlins vs. Milwaukee Brewers [home feed]",
-      "url": "https://www.vdocity.com/_2hPcz2TLZ5K6VMrrhUYfzY8fsyus7e67Wr1z"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "San Diego Padres vs. Kansas City Royals [away feed]",
-      "url": "https://www.vdocity.com/_2inuMBEDc1ngaK4oyeADA3vme8RT4saYojVq"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "San Diego Padres vs. Kansas City Royals [home feed]",
-      "url": "https://www.vdocity.com/_2ioJn66K9981BxRLS1HJfSFix12Z5jxdQ45m"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "St.Louis Cardinals vs. Arizona Diamondbacks [away feed]",
-      "url": "https://www.vdocity.com/_2ioiD18xDD8EtFyx3eTSoqMReuHmqBW1HDGk"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "St.Louis Cardinals vs. Arizona Diamondbacks [home feed]",
-      "url": "https://www.vdocity.com/_2ip7dv11MEtYDH54teJ45cfdQSVhYLsYU1jx"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Tampa Bay Rays vs. Boston Red Sox [away feed]",
-      "url": "https://www.vdocity.com/_2ipX4ps4VpAcpt2P1vaSK8kAv7qenExxv7b2"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Tampa Bay Rays vs. Boston Red Sox [home feed]",
-      "url": "https://www.vdocity.com/_2ipvVjj7dqvv9uEHmyoTmacq5pLBc3Z53M4b"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Texas Rangers vs. Atlanta Braves [away feed]",
-      "url": "https://www.vdocity.com/_2iqPUrwehFx4QrttFL8zARx9NZR4HPzE95eH"
-    },
-    {
-      "date": "",
-      "time": "15:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Texas Rangers vs. Atlanta Braves [home feed]",
-      "url": "https://www.vdocity.com/_2iqnumoeT8NZJDsZXihRpkmxAgbkWrdMbVZu"
-    },
-    {
-      "date": "",
-      "time": "15:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Peru",
-      "title": "Grau - UTC Cajamarca",
-      "url": "https://www.vdocity.com/_2irCMV8YJahUQFHx4U5SGrnHNKCr1ggFKp8w"
-    },
-    {
-      "date": "",
-      "time": "15:30 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "IndyCar",
-      "title": "Indy NXT Music City Grand Prix Qualifying",
-      "url": "https://www.vdocity.com/_5VETXVrYgavoebpgsSAGNWn92ajuS9NDv"
-    },
-    {
-      "date": "",
-      "time": "15:30 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "Boston Celtics vs. Orlando Magic",
-      "url": "https://www.vdocity.com/_2irbnPzbScTmjGVrpXJTjJcm9neZPUQCEdL3"
-    },
-    {
-      "date": "",
-      "time": "15:45 UTC -5",
+      "time": "09:00 UTC -5",
       "category": "RUGBY",
-      "info": "World Nations Cup",
-      "title": "Tonga - Portugal",
-      "url": "https://www.vdocity.com/_2j8hPqFtC7UU2vN45jko5A65CuMF2s7KMiQx"
+      "info": "Super League",
+      "title": "Castleford Tigers - Leeds Rhinos",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2wffiHaarRtWZw"
     },
     {
       "date": "",
-      "time": "16:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "UFC Fight Night: Du Plessis vs Usman Prelims",
-      "url": "https://www.vdocity.com/_41PHNbykThnNrtF955K4SZPmTxY5LHjr9M3F"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "UFC Fight Night: Du Plessis vs Usman Prelims [spanish]",
-      "url": "https://www.vdocity.com/_41PgoWqqzq7hUXbfXSS9wwii5E5YPCSXsqCQ"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "NASCAR",
-      "title": "NASCAR Cup Series Practice",
-      "url": "https://www.vdocity.com/_5aZYGSMEzAwPbYBTkZ9WfWH4S3BxoZh15"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Brazil Serie B",
-      "title": "Atletico GO - Athletic Club",
-      "url": "https://www.vdocity.com/_2j96pk7wL9EmNJpq7zU1PXSBaWWmbyPf1hoA"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "SOCCER",
-      "info": "FIFA World Cup",
-      "title": "France - England [english alt]",
-      "url": "https://www.vdocity.com/_2j9REqpSXi5Mhu4nQi2tg6obecQkQ1j6q3wc"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "SOCCER",
-      "info": "FIFA World Cup",
-      "title": "France - England [english]",
-      "url": "https://www.vdocity.com/_2j9pfkgVfjqf2vMWVQTbRbhcqbqicXV6ZVGL"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "SOCCER",
-      "info": "FIFA World Cup",
-      "title": "France - England [spanish]",
-      "url": "https://www.vdocity.com/_2jAE5Xf5ioJyne1udbb3ogw3bvYHheANDuP7"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "SOCCER",
-      "info": "FIFA World Cup",
-      "title": "France - England [spanish alt]",
-      "url": "https://www.vdocity.com/_2jAdWSX8rq5H7fDpPep5G8mXtBwJrTauPyF9"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "VOLLEYBALL",
-      "info": "Nations League",
-      "title": "France - Poland",
-      "url": "https://www.vdocity.com/_2kZusbJ1umYsCcRmfpRcReZeLwWXmekjYMgh"
-    },
-    {
-      "date": "",
-      "time": "16:00 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "Philadelphia 76ers vs. Milwaukee Bucks",
-      "url": "https://www.vdocity.com/_2kaKJWA7SttBpFnJ8BYhvoFZLNBvrrc1dVKW"
-    },
-    {
-      "date": "",
-      "time": "16:30 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "PFL Austin: Eblen vs. Kasanganay 2 - Prelims [english]",
-      "url": "https://www.vdocity.com/_2kaijRCkWxtRWZLujpir5Rjtu1MbJskzCDLD"
-    },
-    {
-      "date": "",
-      "time": "16:30 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "PFL Austin: Eblen vs. Kasanganay 2 - Prelims [spanish]",
-      "url": "https://www.vdocity.com/_2kb8AL4oezeiqaS2apZTMD46eYZX238XPMJ8"
-    },
-    {
-      "date": "",
-      "time": "16:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Ecuador",
-      "title": "LDU Quito - Leones del Norte",
-      "url": "https://www.vdocity.com/_2kbXbEvroZvoTBPLi6qqaj8eADuUFwDx4YvW"
-    },
-    {
-      "date": "",
-      "time": "17:00 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "NASCAR",
-      "title": "NASCAR Cup Series Qualifying",
-      "url": "https://www.vdocity.com/_5aZYGSMEzAwPbYBTkZ9WfWH4S3Bxoa2V3"
-    },
-    {
-      "date": "",
-      "time": "17:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Chile Copa de la Liga",
-      "title": "Coquimbo - O'Higgins",
-      "url": "https://www.vdocity.com/_2kbw29nuwbh6nCbFUA4s3B1K2XTe3hVT3HLs"
-    },
-    {
-      "date": "",
-      "time": "17:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Copa Paulista",
-      "title": "Bandeirante - Linense",
-      "url": "https://www.vdocity.com/_2kcQ1H1T11iF3AFqwWQPS2b25NW8zBAQshpD"
-    },
-    {
-      "date": "",
-      "time": "17:00 UTC -5",
-      "category": "MOTORSPORT",
-      "info": "IndyCar",
-      "title": "IndyCar Series Music City Grand Prix Practice",
-      "url": "https://www.vdocity.com/_5VETXVrYgavoebpgsSAGNWn92ajuSA3Ce"
-    },
-    {
-      "date": "",
-      "time": "17:30 UTC -5",
-      "category": "SOCCER",
-      "info": "NWSL",
-      "title": "Chicago Red Stars W - Angel City W",
-      "url": "https://www.vdocity.com/_2kcoSBsSkt8jvXEXDtxq6MQpAtdCFg89Uco6"
-    },
-    {
-      "date": "",
-      "time": "17:30 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "Houston Rockets vs. Memphis Grizzlies",
-      "url": "https://www.vdocity.com/_2kdCsuCLcLTf2YeukeLqYTR9NXEHkWB3CwN4"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Friendly",
-      "title": "Millonarios - Colo Colo",
-      "url": "https://www.vdocity.com/_2kdcJp4PkNDxMZrpWhZrzuFd9zg18HtyocYo"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "UNAM Pumas - Pachuca [spanish alt]",
-      "url": "https://www.vdocity.com/_2kuhvFKgVsEefDj1mv2CLvPr2fuyHh6owYVF"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "UNAM Pumas - Pachuca [spanish]",
-      "url": "https://www.vdocity.com/_2kv7MABjdtzwzcBnpAjQfHjxQH5VroP9v1Md"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Detroit - Indy Eleven",
-      "url": "https://www.vdocity.com/_5VETXVrYgavoebpgsSAGNWn92ajuSANgb"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Loudoun - Tampa Bay Rowdies",
-      "url": "https://www.vdocity.com/_2kvRmFtEqTqYLCRk6tJHwhC667VWccxs8mYi"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Sporting Jax - Brooklyn",
-      "url": "https://www.vdocity.com/_2kvqCAkHyVbqfDiUBaizhC67H6vUq8irsCsS"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL1",
-      "title": "Charlotte Independence - Chattanooga Red Wolves",
-      "url": "https://www.vdocity.com/_2kwEbwit2Z5AQwNsKmrT5HKY3Rd3vFQ8XczD"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL1",
-      "title": "New York Cosmos - Corpus Christi FC",
-      "url": "https://www.vdocity.com/_2kwe2rawAaqTjxan5q5UXjA18J18L9qtKJoM"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL1",
-      "title": "Richmond Kickers - Spokane Velocity",
-      "url": "https://www.vdocity.com/_3ycGrBux9x2CEatBNu3fAy1H2TTK7gPYLpBX"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL1",
-      "title": "Union Omaha - Westchester SC",
-      "url": "https://www.vdocity.com/_3ycgH6n3h5MWrEEhqGAkgMLEq81iuW51TgNc"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "BASKETBALL",
-      "info": "Canada CEBL",
-      "title": "Scarborough Shooting Stars - Ottawa Blackjacks",
-      "url": "https://www.vdocity.com/_3yd5i1pgm9MkYXoKSuLtpypb6NF2KUuNsZrx"
-    },
-    {
-      "date": "",
-      "time": "18:00 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "Atlanta Hawks vs. Washington Wizards",
-      "url": "https://www.vdocity.com/_3ydV8vgjuB83sYtSHuBW6m8nquSx2eGv4NLA"
-    },
-    {
-      "date": "",
-      "time": "18:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Game 2: Pittsburgh Pirates vs. Cleveland Guardians [away feed]",
-      "url": "https://www.vdocity.com/_3ydtZqYo3kQ8V9qkRBTtLHDKeyjGJagwtjzR"
-    },
-    {
-      "date": "",
-      "time": "18:10 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Game 2: Pittsburgh Pirates vs. Cleveland Guardians [home feed]",
-      "url": "https://www.vdocity.com/_3yeHzkQrBnARpB3fBEgunj5zXHHS6LxSsURh"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "AMERICAN FOOTBALL",
-      "info": "CFL",
-      "title": "Toronto Argonauts vs. Hamilton Tiger-Cats",
-      "url": "https://www.vdocity.com/_3yekysdPFCBa58iFeb2SBaRJp2NJmhPbk7E5"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Peru",
-      "title": "Cusco - Alianza Atletico",
-      "url": "https://www.vdocity.com/_3yfAQnVP14c4xVgvvyasquF7c9Z11A2jCX8m"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Charleston Battery - Sacramento Republic FC",
-      "url": "https://www.vdocity.com/_3yfZrVpGrWvz4X7KTixtJ1FSonA6Vz5ccNDZ"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Rhode Island - Hartford Athletic",
-      "url": "https://www.vdocity.com/_3yfyHQgKzYhHPYKEDnBukckrQQ3hwgu3c7xH"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "SOCCER",
-      "info": "USL1",
-      "title": "Fort Wayne - Greenville Triumph SC",
-      "url": "https://www.vdocity.com/_3yx4tqwck3hyhCBRUzeF6UUXXRjmLLZomQ5M"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "SOCCER",
-      "info": "USL1",
-      "title": "One Knoxville - AV Alta",
-      "url": "https://www.vdocity.com/_3yxUKkoft5UH2aeCXFMTQqpdu2uHuSr9jrxQ"
-    },
-    {
-      "date": "",
-      "time": "18:30 UTC -5",
-      "category": "RUGBY",
-      "info": "World Nations Cup",
-      "title": "USA - Spain",
-      "url": "https://www.vdocity.com/_3yxnjrWB5eJsNAt9oxvLhFGm65MztK8URk2Z"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "WWE",
-      "title": "WWE Saturday Night's Main Event",
-      "url": "https://www.vdocity.com/_3yyCAmNEDg5AhCAstfM3SkAnH4ny6ptUAWqv"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "PFL Austin: Eblen vs. Kasanganay 2 [english]",
-      "url": "https://www.vdocity.com/_3yybaYLpGjYVSuqH2rUVpbmBDjX93ELKrd7J"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "PFL Austin: Eblen vs. Kasanganay 2 [spanish]",
-      "url": "https://www.vdocity.com/_3yz11TCsQmJnmw3BnuhXH3bf1CxrR6TUW9LH"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "UFC Fight Night: Du Plessis vs Usman",
-      "url": "https://www.vdocity.com/_41PHNbykThnNrtF955K4SZPmTxY5LHjr9M3E"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "COMBAT SPORT",
-      "info": "MMA",
-      "title": "UFC Fight Night: Du Plessis vs Usman [spanish]",
-      "url": "https://www.vdocity.com/_41PgoWqqzq7hUXbfXSS9wwii5E5YPCSXsqCP"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "BASKETBALL",
-      "info": "WNBA",
-      "title": "New York Liberty W vs. Indiana Fever W",
-      "url": "https://www.vdocity.com/_41Q6ERtV4u7wAqAH95cJ6aD4LUJqoBAN2LhH"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "BASKETBALL",
-      "info": "WNBA",
-      "title": "Portland Fire W vs. Minnesota Lynx W",
-      "url": "https://www.vdocity.com/_41QVfLkYCvtEVrFPz5SuNMXG61WmWLXuD9AV"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "SOCCER",
-      "info": "Ecuador",
-      "title": "Barcelona Guayaquil - Libertad",
-      "url": "https://www.vdocity.com/_41Qu6FcbMWAK7TCi7MjHbsrCMnpM1Ms8d2gT"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "SOCCER",
-      "info": "NWSL",
-      "title": "Racing Louisville W - Houston Dash W",
-      "url": "https://www.vdocity.com/_41RJXAUeVXvcSUQcsQxK4KisE6NWo88dbm7j"
-    },
-    {
-      "date": "",
-      "time": "19:00 UTC -5",
-      "category": "RUGBY",
-      "info": "World Nations Cup",
-      "title": "Canada - Zimbabwe",
-      "url": "https://www.vdocity.com/_41RmWHhBYwwkhS5DLmHqTB4ApEPkWWtPctyJ"
-    },
-    {
-      "date": "",
-      "time": "19:08 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Los Angeles Dodgers vs. New York Yankees",
-      "url": "https://www.vdocity.com/_41SAwCZBJpNFao3td9rH7fYtvi532wKcJtqJ"
-    },
-    {
-      "date": "",
-      "time": "19:08 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Los Angeles Dodgers vs. New York Yankees [spanish]",
-      "url": "https://www.vdocity.com/_41SaNut5AGhAgpUH9uEHZmZE8Lg8XmNW3DQJ"
-    },
-    {
-      "date": "",
-      "time": "19:08 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "San Francisco Giants vs. Seattle Mariners",
-      "url": "https://www.vdocity.com/_41Syopk8JJTU1qgBuxTK2DPhup7quZ6Sx2bS"
-    },
-    {
-      "date": "",
-      "time": "19:30 UTC -5",
-      "category": "BASKETBALL",
-      "info": "WNBA",
-      "title": "Washington Mystics W vs. Golden State Valkyries W",
-      "url": "https://www.vdocity.com/_41j5RG1R3oUAKVYPBAueN4s1U8sDmzWBYEaF"
-    },
-    {
-      "date": "",
-      "time": "19:30 UTC -5",
-      "category": "SOCCER",
-      "info": "Bolivia",
-      "title": "Aurora - Oriente Petrolero",
-      "url": "https://www.vdocity.com/_41jUrAsUBqETet1ADRcrgSD8LXz4845v3aYi"
-    },
-    {
-      "date": "",
-      "time": "19:30 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "FC Tulsa - El Paso",
-      "url": "https://www.vdocity.com/_41joGGZyPQ53zUF7W9BjxqfFXaSm6vNEjTde"
-    },
-    {
-      "date": "",
-      "time": "19:30 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "Golden State Warriors vs. Los Angeles Lakers",
-      "url": "https://www.vdocity.com/_41kChBS2XRqMKVXqaqcSi6vEQ7x2PmbRy3VM"
-    },
-    {
-      "date": "",
-      "time": "19:45 UTC -5",
-      "category": "SOCCER",
-      "info": "NWSL",
-      "title": "Utah Royals W - Orlando Pride W",
-      "url": "https://www.vdocity.com/_41kc6xQcaVJg5DCEj2ju6CQ2j9bH16XjCsDa"
-    },
-    {
-      "date": "",
-      "time": "20:00 UTC -5",
-      "category": "BOXING",
-      "info": "Event",
-      "title": "Bryan Flores vs. Jonathan Navarro",
-      "url": "https://www.vdocity.com/_41m1XsGfiX4yQEQ9V5xvYeEWWd2zNxesr3z9"
-    },
-    {
-      "date": "",
-      "time": "20:00 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "San Antonio Scorpions - Las Vegas Lights",
-      "url": "https://www.vdocity.com/_43AHu23YmTYZVBc6mFaTiA2dUAZX5786kRKA"
-    },
-    {
-      "date": "",
-      "time": "20:00 UTC -5",
-      "category": "VOLLEYBALL",
-      "info": "Nations League",
-      "title": "USA - Bulgaria",
-      "url": "https://www.vdocity.com/_43AhKvueJast6pxdDchZDYMan3Ad5yWBLQQ7"
-    },
-    {
-      "date": "",
-      "time": "20:00 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "Indiana Pacers vs. New Orleans Pelicans",
-      "url": "https://www.vdocity.com/_43B6kqxHNet7o8XEqFshNAqw3HPvVxLYkdPK"
-    },
-    {
-      "date": "",
-      "time": "20:05 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "Monterrey - Santos Laguna [spanish alt]",
-      "url": "https://www.vdocity.com/_43BWBkpLWgeR89cMgFiJdxA86DYDFA2h5vtr"
-    },
-    {
-      "date": "",
-      "time": "20:05 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "Monterrey - Santos Laguna [spanish]",
-      "url": "https://www.vdocity.com/_43BucfgPfFvVjkZfoXzgsUEfbttAV487YNEd"
-    },
-    {
-      "date": "",
-      "time": "20:07 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "Chivas Guadalajara - Toluca [spanish alt]",
-      "url": "https://www.vdocity.com/_43CK3aYSoHgo4mmaZbDiKv7LUCSLGpPcCdBh"
-    },
-    {
-      "date": "",
-      "time": "20:07 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "Chivas Guadalajara - Toluca [spanish]",
-      "url": "https://www.vdocity.com/_43Cn2hkyrhhwKjSB2wZEiw7a5J1oF8crdKRX"
-    },
-    {
-      "date": "",
-      "time": "20:50 UTC -5",
-      "category": "RUGBY",
-      "info": "NRLW",
-      "title": "Gold Coast Titans W - Parramatta Eels W",
-      "url": "https://www.vdocity.com/_43DBTccyca8SD6QrKL7gPFwNsRCVUbFz5jLC"
-    },
-    {
-      "date": "",
-      "time": "21:05 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Washington Nationals vs. Athletics [away feed]",
-      "url": "https://www.vdocity.com/_5VAfgRYZzLd5DvZdxF3GgjGcNmJcyRWz5"
-    },
-    {
-      "date": "",
-      "time": "21:05 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Washington Nationals vs. Athletics [home feed]",
-      "url": "https://www.vdocity.com/_5VBsS8yCvy4w9xHmhed1gyZzx7VPyDNBD"
-    },
-    {
-      "date": "",
-      "time": "21:07 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Detroit Tigers vs. Los Angeles Angels [away feed]",
-      "url": "https://www.vdocity.com/_5VDFmnS5oxo2zvYUAcA1a7JVepUaLiw6u"
-    },
-    {
-      "date": "",
-      "time": "21:07 UTC -5",
-      "category": "BASEBALL",
-      "info": "MLB",
-      "title": "Detroit Tigers vs. Los Angeles Angels [home feed]",
-      "url": "https://www.vdocity.com/_5VETXVrYgavoebpgsSAGNWn92ajuSBibS"
-    },
-    {
-      "date": "",
-      "time": "21:30 UTC -5",
-      "category": "SOCCER",
-      "info": "USL",
-      "title": "Phoenix Rising FC - Monterey Bay",
-      "url": "https://www.vdocity.com/_5VFfKbcBsJo17vDG9S1fYfnLvcWBiTLNf"
-    },
-    {
-      "date": "",
-      "time": "21:30 UTC -5",
-      "category": "BASKETBALL",
-      "info": "NBA Summer League",
-      "title": "San Antonio Spurs vs. Phoenix Suns",
-      "url": "https://www.vdocity.com/_5VGs5K2powEs3wwPtqq3bw8iqNpST6q6B"
-    },
-    {
-      "date": "",
-      "time": "22:00 UTC -5",
-      "category": "VOLLEYBALL",
-      "info": "Nations League",
-      "title": "Belgium - Canada",
-      "url": "https://www.vdocity.com/_5W6nbYLygDa2kXMPqUgpwyhVj9qh48Som"
-    },
-    {
-      "date": "",
-      "time": "22:10 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "Queretaro - Club America [spanish alt]",
-      "url": "https://www.vdocity.com/_5W7zMFmccr1theMz8z4v5NPbkH3m76czs"
-    },
-    {
-      "date": "",
-      "time": "22:10 UTC -5",
-      "category": "SOCCER",
-      "info": "Mexico",
-      "title": "Queretaro - Club America [spanish]",
-      "url": "https://www.vdocity.com/_5W8wBAjJDKGamVeYmvxc7Lj195hFBHxGq"
-    },
-    {
-      "date": "",
-      "time": "22:10 UTC -5",
-      "category": "AUSSIE RULES",
-      "info": "AFL",
-      "title": "Richmond Tigers - Hawthorn Hawks",
-      "url": "https://www.vdocity.com/_5WA8vt9w9wiShXd27T9DqKpBmT2GrgWUx"
-    },
-    {
-      "date": "",
-      "time": "22:45 UTC -5",
-      "category": "RUGBY",
-      "info": "NRLW",
-      "title": "Brisbane Broncos W - Wests Tigers W",
-      "url": "https://www.vdocity.com/_43DBTccyca8SD6QrKL7gPFwNsRCVUbFz64p9"
-    },
-    {
-      "date": "",
-      "time": "00:15 UTC -5",
-      "category": "AUSSIE RULES",
-      "info": "AFL",
-      "title": "Gold Coast Suns - Western Bulldogs",
-      "url": "https://www.vdocity.com/_43DBTccyca8SD6QrKL7gPFwNsRCVUbFz64pA"
-    },
-    {
-      "date": "",
-      "time": "01:05 UTC -5",
-      "category": "RUGBY",
-      "info": "NRL",
-      "title": "Dolphins - North Queensland Cowboys",
-      "url": "https://www.vdocity.com/_5WBLdDRQN8JC2FBTbKUnLWQrSTG1vhTAv"
-    },
-    {
-      "date": "",
-      "time": "01:30 UTC -5",
-      "category": "VOLLEYBALL",
-      "info": "Nations League",
-      "title": "Cuba - Italy",
-      "url": "https://www.vdocity.com/_5WCYNvr3Jkk3xGubLjJAQGZBfU2R3wiPb"
-    },
-    {
-      "date": "",
-      "time": "01:30 UTC -5",
+      "time": "09:00 UTC -5",
       "category": "HANDBALL",
       "info": "European Championship",
-      "title": "Bosnia & Herzegovina U20 - Czech Republic U20",
-      "url": "https://www.vdocity.com/_5aNXrgcoT3aym8er5Zp9GmcQALmut8nWt"
+      "title": "Denmark U20 - Slovenia U20",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2wgQXon9W4AB3e"
     },
     {
       "date": "",
-      "time": "01:30 UTC -5",
+      "time": "09:00 UTC -5",
       "category": "HANDBALL",
       "info": "European Championship",
-      "title": "Poland U20 - Latvia U20",
-      "url": "https://www.vdocity.com/_5aPjcQ3ZXnaeeZhqHdcDvPS8dE8nU5NSN"
+      "title": "Switzerland U20 - Spain U20",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2wh9MKyi9gRqYk"
     },
     {
       "date": "",
-      "time": "01:30 UTC -5",
-      "category": "HANDBALL",
-      "info": "European Championship",
-      "title": "Turkey U20 - Greece U20",
-      "url": "https://www.vdocity.com/_5aQwN81iFhcFyy1F9TjP6wtqj9hoV6E6g"
+      "time": "09:00 UTC -5",
+      "category": "TENNIS",
+      "info": "WTA",
+      "title": "WTA Istanbul Vandewinkel - Tararudee",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtBprYCDyWkV2qo"
     },
     {
       "date": "",
-      "time": "01:40 UTC -5",
-      "category": "AUSSIE RULES",
-      "info": "AFL",
-      "title": "Essendon Bombers - GWS Giants",
-      "url": "https://www.vdocity.com/_5aS97qSMCL47uzPA9EKAzis9aBVYD8yhG"
+      "time": "09:30 UTC -5",
+      "category": "SOCCER",
+      "info": "Allsvenskan",
+      "title": "Elfsborg - Sirius",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2whtArBGoJhqWN"
     },
     {
       "date": "",
-      "time": "03:15 UTC -5",
-      "category": "RUGBY",
-      "info": "NRLW",
-      "title": "Newcastle Knights W - St. George Illawarra Dragons W",
-      "url": "https://www.vdocity.com/_43DBTccyca8SD6QrKL7gPFwNsRCVUbNXtM7D"
+      "time": "09:30 UTC -5",
+      "category": "SOCCER",
+      "info": "Allsvenskan",
+      "title": "Halmstad - Hacken",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2w21vjQsmY8143"
+    },
+    {
+      "date": "",
+      "time": "09:30 UTC -5",
+      "category": "SOCCER",
+      "info": "Allsvenskan",
+      "title": "Hammarby - Degerfors",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2w2kkFcSRAPfYU"
+    },
+    {
+      "date": "",
+      "time": "09:30 UTC -5",
+      "category": "VOLLEYBALL",
+      "info": "Nations League",
+      "title": "Ukraine - Germany",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCz2w3VZmp14nfL3a"
+    },
+    {
+      "date": "",
+      "time": "09:30 UTC -5",
+      "category": "TENNIS",
+      "info": "WTA",
+      "title": "WTA Athens Chan/Kato - Lumsden/Tang",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtCVF9GbFFGXYKL"
+    },
+    {
+      "date": "",
+      "time": "09:30 UTC -5",
+      "category": "TENNIS",
+      "info": "WTA",
+      "title": "WTA Iasi Sherif - Badosa",
+      "url": "https://www.vdocity.com/_5PpPE9QjBKBbZPDhaCmtCWinJzNYX4sJB"
     }
   ]
 }
