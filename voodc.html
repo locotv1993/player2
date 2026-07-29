@@ -1,10 +1,24 @@
 <script>
 const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
+const get = decodeURIComponent(params.get("get") || "");
 
-if(id){
-    window.location.href = "https://www.vdocity.com/" + encodeURIComponent(id);
-}else{
-    document.body.innerHTML = "No se recibió el ID.";
+if (!get) {
+    document.body.innerHTML = "No se recibió ninguna URL.";
+} else if (get.includes("vdocity.com") || get.includes("vctly.com")) {
+
+    // Abre directamente VDocity
+    location.replace(get);
+
+} else {
+
+    // Cualquier otra URL la carga en un iframe
+    document.body.innerHTML = `
+        <iframe
+            src="${get}"
+            style="position:fixed;top:0;left:0;width:100%;height:100%;border:0"
+            allow="autoplay;fullscreen"
+            allowfullscreen>
+        </iframe>
+    `;
 }
 </script>
