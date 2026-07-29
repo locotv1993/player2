@@ -1,0 +1,10 @@
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+if(id){
+    window.location.href = "https://www.vdocity.com/" + encodeURIComponent(id);
+}else{
+    document.body.innerHTML = "No se recibió el ID.";
+}
+</script>
