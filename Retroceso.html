@@ -28,11 +28,10 @@
 <script>
 (function () {
 
-    // Obtener la URL después de ir=
     const params = new URLSearchParams(window.location.search);
     const destino = params.get("ir");
 
-    // Crear el iframe
+    // Cargar el reproductor
     if (destino) {
         const iframe = document.createElement("iframe");
         iframe.src = destino;
@@ -40,15 +39,16 @@
         document.body.appendChild(iframe);
     }
 
-    // Esperar 10 segundos
-    setTimeout(function () {
+    // Crear una entrada adicional en el historial
+    history.pushState({ reproductor: true }, "", location.href);
 
-        // Intentar volver a la página anterior
-        if (window.history.length > 1) {
-            window.history.go(-1);
-        }
+    // Detectar cuando el usuario presiona ATRÁS
+    window.addEventListener("popstate", function () {
 
-    }, 10000);
+        // Ir dos páginas atrás
+        history.go(-2);
+
+    });
 
 })();
 </script>
