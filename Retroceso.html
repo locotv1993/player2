@@ -1,28 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
+
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
 <script>
 (function () {
 
+    // Obtener el parámetro "ir"
     const params = new URLSearchParams(window.location.search);
     const destino = params.get("ir");
 
+    // Cargar la URL dentro del iframe
     if (destino) {
-        document.title = "Cargando...";
-        
         const iframe = document.createElement("iframe");
         iframe.src = destino;
+        iframe.allowFullscreen = true;
         document.body.appendChild(iframe);
     }
 
+    // Evita ejecutar el retroceso más de una vez
     if (sessionStorage.getItem("retrocesoEjecutado") === "1") {
         return;
     }
 
+    // Marcar que ya se ejecutó
     sessionStorage.setItem("retrocesoEjecutado", "1");
 
+    // Esperar 10 segundos
     setTimeout(function () {
+
+        // Retroceder una sola vez
         if (window.history.length > 1) {
             window.history.back();
         }
+
     }, 10000);
 
 })();
 </script>
+
+</body>
+</html>
