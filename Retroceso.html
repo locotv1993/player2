@@ -1,14 +1,53 @@
-(function () {
-    const KEY = "retroceso_ejecutado";
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cargando...</title>
 
-    // Evita que vuelva a ejecutarse en la misma sesión
-    if (sessionStorage.getItem(KEY) === "1") {
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background: #000;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<script>
+(function () {
+
+    // Evita ejecutar el retroceso más de una vez
+    if (sessionStorage.getItem("retrocesoEjecutado") === "1") {
         return;
     }
 
-    sessionStorage.setItem(KEY, "1");
+    // Marca que ya se ejecutó
+    sessionStorage.setItem("retrocesoEjecutado", "1");
 
+    // Espera 10 segundos
     setTimeout(function () {
-        history.back();
-    }, 10000); // 10 segundos
+
+        // Retrocede una sola vez
+        if (window.history.length > 1) {
+            window.history.back();
+        }
+
+    }, 10000);
+
 })();
+</script>
+
+</body>
+</html>
