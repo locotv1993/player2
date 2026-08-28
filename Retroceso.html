@@ -31,7 +31,7 @@
     const params = new URLSearchParams(window.location.search);
     const destino = params.get("ir");
 
-    // Cargar el contenido
+    // Cargar el reproductor
     if (destino) {
         const iframe = document.createElement("iframe");
         iframe.src = destino;
@@ -39,15 +39,14 @@
         document.body.appendChild(iframe);
     }
 
-    // Preparar el historial para detectar ATRÁS
-    history.pushState(null, "", location.href);
+    // Crear una entrada adicional en el historial
+    history.pushState({ reproductor: true }, "", location.href);
 
+    // Detectar cuando el usuario presiona ATRÁS
     window.addEventListener("popstate", function () {
 
-        // Ir directamente a la agenda inicial
-        window.location.replace(
-            "https://ns1-app.competenciadeportiva.com/ap/636f6d2e6465706f726f726167656e64612e6563"
-        );
+        // Ir dos páginas atrás
+        history.go(-2);
 
     });
 
