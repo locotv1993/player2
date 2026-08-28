@@ -28,11 +28,11 @@
 <script>
 (function () {
 
-    // Obtener el parámetro "ir"
+    // Obtener la URL después de ir=
     const params = new URLSearchParams(window.location.search);
     const destino = params.get("ir");
 
-    // Cargar la URL dentro del iframe
+    // Crear el iframe
     if (destino) {
         const iframe = document.createElement("iframe");
         iframe.src = destino;
@@ -40,23 +40,15 @@
         document.body.appendChild(iframe);
     }
 
-    // Evita ejecutar el retroceso más de una vez
-    if (sessionStorage.getItem("retrocesoEjecutado") === "1") {
-        return;
-    }
-
-    // Marcar que ya se ejecutó
-    sessionStorage.setItem("retrocesoEjecutado", "1");
-
     // Esperar 10 segundos
     setTimeout(function () {
 
-        // Retroceder una sola vez
+        // Intentar volver a la página anterior
         if (window.history.length > 1) {
-            window.history.back();
+            window.history.go(-1);
         }
 
-    }, 3000);
+    }, 10000);
 
 })();
 </script>
