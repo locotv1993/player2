@@ -1,0 +1,14 @@
+(function () {
+    const KEY = "retroceso_ejecutado";
+
+    // Evita que vuelva a ejecutarse en la misma sesión
+    if (sessionStorage.getItem(KEY) === "1") {
+        return;
+    }
+
+    sessionStorage.setItem(KEY, "1");
+
+    setTimeout(function () {
+        history.back();
+    }, 10000); // 10 segundos
+})();
