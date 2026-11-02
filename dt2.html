@@ -54,7 +54,16 @@ function play(url){
 
     status('Cargando video...');
     if(Hls.isSupported()){
-      hls = new Hls();
+     
+hls = new Hls({
+  debug: false,
+  enableWorker: true,
+  lowLatencyMode: false,
+  fragLoadingTimeOut: 15000,
+  fragLoadingMaxRetry: 2,
+  fragLoadingRetryDelay: 1000
+});
+
       hls.loadSource(u.href);
       hls.attachMedia(video);
       hls.on(Hls.Events.MANIFEST_PARSED,()=>{
