@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>RTV77 - Selección de señal</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+    }
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+
+<iframe
+  id="rtvPlayer"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowfullscreen>
+</iframe>
+
+<script>
+const PLAYER_ORIGIN =
+  "https://mimi01eo.fut0newsiryroquite.cfd";
+
+const params = new URLSearchParams(location.search);
+
+const matchId = params.get("id") || "4433449";
+const streamId = Number(params.get("stream") || "914605");
+const sportType = 1;
+
+const mdata = btoa(matchId + "_" + sportType);
+
+const iframe = document.getElementById("rtvPlayer");
+
+iframe.src =
+  PLAYER_ORIGIN +
+  "/es/player.html?mdata=" +
+  encodeURIComponent(mdata) +
+  "&ilang=es";
+
+function seleccionarSenal() {
+  iframe.contentWindow.postMessage({
+    msgEventType: "FROM_PARENT_SITE",
+    val: {
+      evType: "EV_PLAYER_DATA",
+      _si: {
+        streamId: streamId,
+        siteType: 2001,
+        name: "Señal seleccionada",
+        oriName: "Señal seleccionada"
+      }
+    }
+  }, PLAYER_ORIGIN);
+}
+
+let intentos = 0;
+
+const intervalo = setInterval(() => {
+  seleccionarSenal();
+  intentos++;
+
+  if (intentos >= 12) {
+    clearInterval(intervalo);
+  }
+}, 1500);
+</script>
+
+</body>
+</html>
