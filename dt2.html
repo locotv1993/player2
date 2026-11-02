@@ -16,8 +16,9 @@
 <div class="row"><div><label for="m">Partido (m)</label><input id="m" inputmode="numeric" placeholder="Ej. 4398539"></div><div><label for="s">Señal (s)</label><input id="s" inputmode="numeric" placeholder="Ej. 914533"></div><div><label for="sp">Deporte (sp)</label><input id="sp" inputmode="numeric" value="1"></div></div>
 <button id="query">Consultar API</button>
 <section class="panel"><h3>Inspector Protobuf</h3>
-<p class="hint">Muestra campos y longitudes, comprueba estructuras anidadas y presenta una vista hexadecimal limitada. No interpreta los campos como URLs ni expone automáticamente valores completos.</p>
+<p class="hint">Muestra campos y longitudes, comprueba estructuras anidadas e inspecciona los campos 4 y 12 sin publicar su contenido completo. No interpreta los campos como URLs ni expone automáticamente valores completos.</p>
 <button id="inspectBtn" class="secondary" disabled>Inspeccionar campo 10</button>
+<button id="inspectDetails" class="secondary" disabled>Inspeccionar campos 4 y 12</button>
 <button id="exportBtn" class="secondary" disabled>Exportar respuesta .bin</button>
 <button id="exportField" class="secondary" disabled>Exportar campo 10 .bin</button>
 <pre id="inspect" aria-live="polite">Consulta la API para habilitar el inspector.</pre>
@@ -42,11 +43,50 @@ function parseProto(a){let at=0,count=0;const fields=[];while(at<a.length){const
 function hexPreview(a,max=96){const b=a.slice(0,max);let lines=[];for(let i=0;i<b.length;i+=16){const chunk=b.slice(i,i+16);lines.push(i.toString(16).padStart(4,'0')+'  '+Array.from(chunk,v=>v.toString(16).padStart(2,'0')).join(' '));}return lines.join('\n')+(a.length>max?`\n... (${a.length-max} bytes adicionales ocultos)`:'');}
 function inspectField10(){if(!lastField10){$('inspect').textContent='No hay campo 10 disponible.';return;}const a=lastField10;const lines=[`Campo 10: ${a.length} bytes`,`Vista hexadecimal (primeros 96 bytes):`,hexPreview(a),'','Análisis estructural:'];try{const nested=parseProto(a);lines.push(`Estructura Protobuf anidada válida: ${nested.length} campos`);for(const f of nested.slice(0,40)){lines.push(`  Campo ${f.id} | wire ${f.wire} | ${f.kind} | ${f.length} bytes | offset ${f.offset}`);if(f.payload && f.payload.length && f.payload.length<=512){try{const children=parseProto(f.payload);if(children.length)lines.push(`    Posibles subcampos: ${children.slice(0,12).map(x=>`${x.id}(${x.kind},${x.length})`).join(', ')}`);}catch{}}}}catch(e){lines.push('No se interpreta íntegramente como un mensaje Protobuf anidado: '+e.message);lines.push('Puede ser una cadena, contenido codificado o una estructura distinta.');}
 $('inspect').textContent=lines.join('\n');log('Campo 10 inspeccionado localmente; sin interpretar ni mostrar tokens completos.');}
+function inspectDetails(){
+  const lines=['INSPECCIÓN DE CAMPOS 4 Y 12',''];
+  if(!lastField10){$('inspect').textContent='Consulta primero la API.';return;}
+  try{
+    const outer=parseProto(lastField10);
+    const envelope=outer.find(f=>f.id===2 && f.payload);
+    if(!envelope)throw Error('No existe campo 2 anidado.');
+    const fields=parseProto(envelope.payload);
+    const targets=fields.filter(f=>[4,12].includes(f.id) && f.payload);
+    if(!targets.length)throw Error('No se encontraron campos 4 o 12.');
+    for(let i=0;i<targets.length;i++){
+      const f=targets[i];
+      lines.push(`Campo ${f.id} (${i+1}/${targets.length}) | ${f.length} bytes | offset ${f.offset}`);
+      const bytes=f.payload;
+      let decoded=null;
+      try{decoded=new TextDecoder('utf-8',{fatal:true}).decode(bytes);}catch{}
+      const printable=decoded!==null && [...decoded].every(ch=>{const n=ch.codePointAt(0);return n>=32 && n!==127;});
+      lines.push('UTF-8 válido: '+(decoded===null?'no':'sí'));
+      lines.push('Texto completamente imprimible: '+(printable?'sí':'no'));
+      if(printable){
+        // No mostrar cadenas largas que podrían contener direcciones o credenciales.
+        if(decoded.length<=24 && !/https?:|token|key|secret|auth|[?&=]/i.test(decoded)) lines.push('Texto breve: '+decoded);
+        else lines.push('Texto oculto por precaución (longitud '+decoded.length+' caracteres).');
+      }
+      try{
+        const nested=parseProto(bytes);
+        lines.push('Estructura Protobuf posible: '+nested.length+' campos');
+        lines.push('Tipos: '+nested.slice(0,12).map(x=>`${x.id}/wire${x.wire}/${x.length}B`).join(', '));
+      }catch{lines.push('No es un mensaje Protobuf completo reconocible.');}
+      // Vista limitada: no exponer bytes de cadenas codificadas o tokens en el registro.
+      lines.push('Huella simple (primeros 8 bytes, hex): '+Array.from(bytes.slice(0,8),b=>b.toString(16).padStart(2,'0')).join(' '));
+      lines.push('');
+    }
+    lines.push('Nota: los nombres de los campos requieren un esquema oficial para interpretarse con certeza.');
+  }catch(e){lines.push('No se pudo analizar la estructura: '+e.message);}
+  $('inspect').textContent=lines.join('\n');
+  log('Inspección de campos 4 y 12 completada (valores sensibles ocultos).');
+}
+$('inspectDetails').onclick=inspectDetails;
 function downloadBin(bytes,filename){if(!bytes)return;const blob=new Blob([bytes],{type:'application/octet-stream'});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 $('inspectBtn').onclick=inspectField10;
 $('exportBtn').onclick=()=>downloadBin(lastBytes,`dt2_respuesta_${$('m').value.trim()}_${$('s').value.trim()}.bin`);
 $('exportField').onclick=()=>downloadBin(lastField10,`dt2_campo10_${$('m').value.trim()}_${$('s').value.trim()}.bin`);
-$('query').onclick=async()=>{const m=$('m').value.trim(),s=$('s').value.trim(),sp=$('sp').value.trim();if(!/^\d+$/.test(m)||!/^\d+$/.test(s)||!/^\d+$/.test(sp)){status('Introduce m, s y sp numéricos');return;}lastBytes=lastFields=lastField10=null;for(const id of ['inspectBtn','exportBtn','exportField'])$(id).disabled=true;$('inspect').textContent='Esperando respuesta...';const q=new URLSearchParams({streamId:s,siteType:'2001',continent:'SA',country:'EC',digit:'trd',matchId:m,sportType:sp});status('Consultando API...');log(`Consulta: m=${m}, s=${s}, sp=${sp}`);try{const r=await fetch('https://apis-data-defra10.tcpwe138stya.ru/api/stream/detail?'+q,{cache:'no-store'});const bytes=new Uint8Array(await r.arrayBuffer());log(`API HTTP ${r.status}; ${bytes.length} bytes; tipo ${r.headers.get('content-type')||'desconocido'}`);if(!r.ok)throw Error('HTTP '+r.status);const plain=new TextDecoder('utf-8',{fatal:false}).decode(bytes);if(plain.includes('Stream Not Found')){status('Señal no encontrada');$('inspect').textContent='Stream Not Found';return;}lastBytes=bytes;$('exportBtn').disabled=false;try{const fields=parseProto(bytes);lastFields=fields;log(`Estructura binaria compatible con Protobuf: ${fields.length} campos de nivel superior`);for(const f of fields.slice(0,25))log(`  Campo ${f.id}: ${f.kind}, ${f.length} bytes`);const field10=fields.find(f=>f.id===10&&f.payload);if(field10){lastField10=field10.payload;$('inspectBtn').disabled=false;$('exportField').disabled=false;$('inspect').textContent=`Campo 10 detectado: ${lastField10.length} bytes. Pulsa «Inspeccionar campo 10».`;}else{$('inspect').textContent='No se encontró campo 10 de tipo bytes.';}status('Respuesta recibida; lista para inspeccionar');}catch(e){log('No se pudo confirmar estructura Protobuf: '+e.message);$('inspect').textContent='Primeros 96 bytes:\n'+hexPreview(bytes);status('Respuesta recibida; formato no confirmado');}}catch(e){status('Error al consultar API');log('API: '+e.message);$('inspect').textContent='Error de consulta.';}};
+$('query').onclick=async()=>{const m=$('m').value.trim(),s=$('s').value.trim(),sp=$('sp').value.trim();if(!/^\d+$/.test(m)||!/^\d+$/.test(s)||!/^\d+$/.test(sp)){status('Introduce m, s y sp numéricos');return;}lastBytes=lastFields=lastField10=null;for(const id of ['inspectBtn','inspectDetails','exportBtn','exportField'])$(id).disabled=true;$('inspect').textContent='Esperando respuesta...';const q=new URLSearchParams({streamId:s,siteType:'2001',continent:'SA',country:'EC',digit:'trd',matchId:m,sportType:sp});status('Consultando API...');log(`Consulta: m=${m}, s=${s}, sp=${sp}`);try{const r=await fetch('https://apis-data-defra10.tcpwe138stya.ru/api/stream/detail?'+q,{cache:'no-store'});const bytes=new Uint8Array(await r.arrayBuffer());log(`API HTTP ${r.status}; ${bytes.length} bytes; tipo ${r.headers.get('content-type')||'desconocido'}`);if(!r.ok)throw Error('HTTP '+r.status);const plain=new TextDecoder('utf-8',{fatal:false}).decode(bytes);if(plain.includes('Stream Not Found')){status('Señal no encontrada');$('inspect').textContent='Stream Not Found';return;}lastBytes=bytes;$('exportBtn').disabled=false;try{const fields=parseProto(bytes);lastFields=fields;log(`Estructura binaria compatible con Protobuf: ${fields.length} campos de nivel superior`);for(const f of fields.slice(0,25))log(`  Campo ${f.id}: ${f.kind}, ${f.length} bytes`);const field10=fields.find(f=>f.id===10&&f.payload);if(field10){lastField10=field10.payload;$('inspectBtn').disabled=false;$('inspectDetails').disabled=false;$('exportField').disabled=false;$('inspect').textContent=`Campo 10 detectado: ${lastField10.length} bytes. Pulsa «Inspeccionar campo 10».`;}else{$('inspect').textContent='No se encontró campo 10 de tipo bytes.';}status('Respuesta recibida; lista para inspeccionar');}catch(e){log('No se pudo confirmar estructura Protobuf: '+e.message);$('inspect').textContent='Primeros 96 bytes:\n'+hexPreview(bytes);status('Respuesta recibida; formato no confirmado');}}catch(e){status('Error al consultar API');log('API: '+e.message);$('inspect').textContent='Error de consulta.';}};
 $('check').onclick=async()=>{let url;try{url=getHlsUrl();}catch(e){status(e.message);return;}status('Comprobando lista...');log('Lista: '+safeUrl(url));try{const r=await fetch(url,{redirect:'follow',cache:'no-store'});log(`Resultado HTTP: ${r.status}; redirigida: ${r.redirected?'sí':'no'}`);log('Destino final: '+safeUrl(r.url));log('Tipo: '+(r.headers.get('content-type')||'desconocido'));if(!r.ok)throw Error('HTTP '+r.status);const text=await r.text();if(!text.trimStart().startsWith('#EXTM3U'))throw Error('La respuesta no comienza con #EXTM3U');log('Lista M3U8 válida; contiene '+text.split(/\r?\n/).filter(x=>x.startsWith('#EXTINF:')).length+' segmentos en esta respuesta');status('Lista HLS válida; falta comprobar sus segmentos');}catch(e){status('No se pudo validar la lista');log('Validación: '+e.message+' (puede ser CORS, redirección o respuesta no HLS)');}};
 function stop(){if(hls){hls.destroy();hls=null;}const v=$('video');v.pause();v.removeAttribute('src');v.load();}
 $('stop').onclick=()=>{stop();status('Reproducción detenida');};
