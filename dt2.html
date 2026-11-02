@@ -1,22 +1,66 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Eventos</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<style>
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+</style>
 </head>
 <body>
-<script>
-const params = new URLSearchParams(window.location.search);
-const id = params.get("id");
 
-if (id) {
-  window.location.replace(
-    "https://mimi01eo.fut0newsiryroquite.cfd/es/player.html?mdata=" +
-    encodeURIComponent(id) +
-    "&ilang=es"
+<video id="video" controls autoplay playsinline></video>
+
+<script>
+const params = new URLSearchParams(location.search);
+
+const m = params.get("m");
+const s = params.get("s");
+const sp = params.get("sp");
+const e = params.get("e");
+const g = params.get("g");
+
+if (!m || !s || !sp || !e || !g) {
+  document.body.textContent = "Faltan parámetros de reproducción";
+} else {
+  const url = new URL(
+    "https://ftweb.ftsystem.workers.dev/pl"
   );
+
+  url.searchParams.set("m", m);
+  url.searchParams.set("s", s);
+  url.searchParams.set("sp", sp);
+  url.searchParams.set("e", e);
+  url.searchParams.set("g", g);
+
+  const video = document.getElementById("video");
+
+  if (Hls.isSupported()) {
+    const hls = new Hls();
+    hls.loadSource(url.toString());
+    hls.attachMedia(video);
+  } else if (video.canPlayType("application/vnd.apple.mpegurl")) {
+    video.src = url.toString();
+  } else {
+    document.body.textContent = "Navegador no compatible con HLS";
+  }
 }
 </script>
+
 </body>
 </html>
