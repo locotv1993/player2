@@ -1,233 +1,44 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>DT2 - Reproductor</title>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT2 — Diagnóstico HLS</title>
 <script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
 <style>
-*{box-sizing:border-box}
-html,body{margin:0;background:#080b12;color:#fff;font:15px Arial}
-main{max-width:960px;margin:auto;padding:15px}
-video{width:100%;aspect-ratio:16/9;background:#000}
-#status{padding:15px;font-weight:bold}
-pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#151c29;padding:12px;border-radius:8px}
-input{width:100%;padding:12px;background:#151c29;color:white;border:1px solid #555}
-button{padding:12px;background:#2563eb;color:white;border:0;margin-top:8px}
+*{box-sizing:border-box}html,body{margin:0;background:#080b12;color:#fff;font:15px Arial,sans-serif}main{max-width:960px;margin:auto;padding:16px}h2{margin:6px 0 16px}video{width:100%;aspect-ratio:16/9;background:#000;border-radius:8px}#status{padding:13px 0;font-weight:bold;color:#93c5fd}label{display:block;margin:12px 0 5px;color:#cbd5e1}input{width:100%;padding:12px;background:#151c29;color:white;border:1px solid #475569;border-radius:6px}button{padding:11px 16px;background:#2563eb;color:white;border:0;border-radius:6px;cursor:pointer;margin:10px 8px 4px 0}button.secondary{background:#334155}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#151c29;padding:12px;border-radius:8px;max-height:420px;overflow:auto;font-size:12px}p{color:#cbd5e1;line-height:1.5}.row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.hint{font-size:13px;color:#94a3b8}@media(max-width:600px){.row{grid-template-columns:1fr}}
 </style>
 </head>
-<body>
-<main>
-<h3>DT2 - Prueba de reproducción</h3>
-<video id="video" controls playsinline autoplay></video>
-<div id="status">Iniciando...</div>
-<p id="info"></p>
-<input id="url" placeholder="URL HLS autorizada (opcional)">
-<button onclick="play(document.getElementById('url').value)">Reproducir</button>
-<pre id="log"></pre>
+<body><main>
+<h2>DT2 — Diagnóstico de reproducción</h2>
+<video id="video" controls playsinline></video>
+<div id="status" role="status">Listo para probar</div>
+<p>Primero consulta los metadatos de la señal. Para reproducir, pega una URL HLS que tengas permiso de utilizar. La consulta no intenta fabricar ni descifrar tokens de acceso.</p>
+<div class="row"><div><label for="m">Partido (m)</label><input id="m" inputmode="numeric" placeholder="Ej. 4398539"></div><div><label for="s">Señal (s)</label><input id="s" inputmode="numeric" placeholder="Ej. 914533"></div><div><label for="sp">Deporte (sp)</label><input id="sp" inputmode="numeric" value="1"></div></div>
+<button id="query">Consultar API</button>
+<label for="url">URL HLS autorizada (.m3u8)</label><input id="url" type="url" placeholder="https://servidor.example/video/index.m3u8">
+<button id="check">Comprobar lista HLS</button><button id="play">Reproducir</button><button id="stop" class="secondary">Detener</button><button id="clear" class="secondary">Limpiar registro</button>
+<p class="hint">El registro oculta las consultas y tokens de las URLs. Si aparece una redirección repetida o un error CORS, no significa que Hls.js esté dañado.</p>
+<pre id="log" aria-live="polite"></pre>
 </main>
 <script>
-const $ = id => document.getElementById(id);
-const p = new URLSearchParams(location.search);
-const m = p.get('m') || '4398539';
-const s = p.get('s') || '914533';
-const sp = p.get('sp') || '1';
-let hls;
-
-$('info').textContent = `Partido: ${m} | Señal: ${s} | Deporte: ${sp}`;
-
-function log(t){
-  $('log').textContent += t + '\n';
-}
-function status(t){
-  $('status').textContent = t;
-}
-function play(url){
-  try{
-    const u = new URL(url);
-    if(!['https:','http:'].includes(u.protocol))
-      throw Error('URL inválida');
-
-    const video = $('video');
-    if(hls) hls.destroy();
-
-    status('Cargando video...');
-    if(Hls.isSupported()){
-     
-hls = new Hls({
-  debug: false,
-  enableWorker: true,
-  lowLatencyMode: false,
-  fragLoadingTimeOut: 15000,
-  fragLoadingMaxRetry: 2,
-  fragLoadingRetryDelay: 1000
-});
-
-      hls.loadSource(u.href);
-      hls.attachMedia(video);
-      hls.on(Hls.Events.MANIFEST_PARSED,()=>{
-        status('Video cargado');
-        video.play().catch(()=>status('Pulsa Play'));
-      });
-     
-hls.on(Hls.Events.ERROR, (_, data) => {
-  const response = data.response || {};
-  const context = data.context || {};
-
-  log('--- ERROR HLS ---');
-  log('Tipo: ' + data.type);
-  log('Detalle: ' + data.details);
-  log('Fatal: ' + data.fatal);
-  log('HTTP: ' + (response.code ?? 'No disponible'));
-  log('Mensaje: ' + (response.text || 'Sin mensaje'));
-  log('Recurso: ' + (
-    context.url ||
-    response.url ||
-    'No disponible'
-  ));
-
-  if (data.fatal) {
-    status('Error HLS: ' + data.details);
-  }
-});
-
-    }else if(video.canPlayType('application/vnd.apple.mpegurl')){
-      video.src = u.href;
-      video.play().catch(()=>status('Pulsa Play'));
-    }else{
-      status('Navegador sin soporte HLS');
-    }
-  }catch(e){
-    status('URL no válida');
-    log(e.message);
-  }
-}
-
-function rot47(t){
-  return t.replace(/[!-~]/g,c=>
-    String.fromCharCode(33+(c.charCodeAt(0)-33+47)%94)
-  );
-}
-
-function readVarint(a,pos){
-  let n=0,shift=0;
-  for(let i=0;i<10;i++){
-    if(pos>=a.length) throw Error('Datos incompletos');
-    const b=a[pos++];
-    n+=(b&127)*2**shift;
-    if(!(b&128)) return [n,pos];
-    shift+=7;
-  }
-  throw Error('Varint inválido');
-}
-
-function parseFields(bytes){
-  const out=[];
-  let i=0;
-  while(i<bytes.length){
-    let tag;
-    [tag,i]=readVarint(bytes,i);
-    const id=Math.floor(tag/8);
-    const wire=tag%8;
-    if(!id || id>10000) throw Error('Campo inválido');
-
-    if(wire===0){
-      let value;
-      [value,i]=readVarint(bytes,i);
-      out.push({id,value});
-    }else if(wire===2){
-      let len;
-      [len,i]=readVarint(bytes,i);
-      if(len>bytes.length-i) throw Error('Longitud inválida');
-      out.push({id,value:bytes.slice(i,i+len)});
-      i+=len;
-    }else if(wire===1 || wire===5){
-      i+=wire===1?8:4;
-      if(i>bytes.length) throw Error('Campo truncado');
-    }else{
-      throw Error('Formato no reconocido');
-    }
-  }
-  return out;
-}
-
-function extractStrings(bytes,depth=0){
-  const found=[];
-  try{
-    for(const field of parseFields(bytes)){
-      if(!(field.value instanceof Uint8Array)) continue;
-      const str=new TextDecoder().decode(field.value);
-      if(str.length>3) found.push(str);
-      if(depth<3)
-        found.push(...extractStrings(field.value,depth+1));
-    }
-  }catch(e){}
-  return found;
-}
-
-async function init(){
-  const q=new URLSearchParams({
-    streamId:s,
-    siteType:p.get('siteType')||'2001',
-    continent:p.get('continent')||'SA',
-    country:p.get('country')||'EC',
-    digit:p.get('digit')||'trd',
-    matchId:m,
-    sportType:sp
-  });
-
-  const endpoint='https://apis-data-defra10.tcpwe138stya.ru/api/stream/detail?'+q;
-
-  status('Consultando señal...');
-  log('Partido '+m+' - Señal '+s);
-
-  try{
-    const r=await fetch(endpoint,{cache:'no-store'});
-    const bytes=new Uint8Array(await r.arrayBuffer());
-    log('HTTP: '+r.status+' | Bytes: '+bytes.length);
-
-    if(!r.ok) throw Error('HTTP '+r.status);
-
-    const text=new TextDecoder().decode(bytes);
-
-    if(text.includes('Stream Not Found')){
-      status('Señal no encontrada');
-      return;
-    }
-
-    const strings=extractStrings(bytes);
-    log('Datos extraídos: '+strings.length);
-
-    const urls=[];
-    for(const str of strings){
-      for(const value of [
-        str,rot47(str),
-        str.slice(8),rot47(str).slice(8),
-        rot47(str.slice(8))
-      ]){
-        for(const match of value.matchAll(/https?:\/\/[^\s"'<>\\]+/g)){
-          if(!urls.includes(match[0])) urls.push(match[0]);
-        }
-      }
-    }
-
-    const media=urls.find(u=>/\.m3u8(?:[?#]|$)/i.test(u));
-
-    if(media){
-      status('Intentando reproducir...');
-      play(media);
-    }else{
-      status('Respuesta recibida, sin URL HLS directa');
-      log('URLs detectadas: '+urls.length);
-      log('La señal podría requerir autorización adicional.');
-    }
-  }catch(e){
-    status('Error al consultar la señal');
-    log(e.message);
-  }
-}
-init();
-</script>
-</body>
-</html>
+'use strict';
+const $=id=>document.getElementById(id);
+const params=new URLSearchParams(location.search);
+for(const key of ['m','s','sp']) if(params.has(key)) $(key).value=params.get(key);
+let hls=null;
+const log=msg=>{const el=$('log');el.textContent+=`[${new Date().toLocaleTimeString()}] ${msg}\n`;el.scrollTop=el.scrollHeight;};
+const status=msg=>$('status').textContent=msg;
+function safeUrl(raw){try{const u=new URL(raw);return u.origin+u.pathname+' [parámetros ocultos]';}catch{return '[URL no disponible]';}}
+function getHlsUrl(){const raw=$('url').value.trim();const u=new URL(raw);if(!['https:','http:'].includes(u.protocol))throw Error('Solo HTTP o HTTPS');if(!/\.m3u8$/i.test(u.pathname))throw Error('La ruta debe terminar en .m3u8');return u.href;}
+function readVarint(a,at){let n=0,shift=0;for(let k=0;k<10;k++){if(at>=a.length)throw Error('Varint truncado');const b=a[at++];if(shift>49)throw Error('Varint demasiado grande');n+=(b&127)*2**shift;if(!(b&128))return [n,at];shift+=7;}throw Error('Varint inválido');}
+function parseProto(a){let at=0,count=0;const fields=[];while(at<a.length){let tag;[tag,at]=readVarint(a,at);const id=Math.floor(tag/8),wire=tag%8;if(id<1||id>10000)throw Error('Identificador de campo inválido');if(++count>1000)throw Error('Demasiados campos');if(wire===0){let value;[value,at]=readVarint(a,at);fields.push({id,wire,kind:'entero',length:0});}else if(wire===2){let len;[len,at]=readVarint(a,at);if(!Number.isSafeInteger(len)||len<0||len>a.length-at)throw Error('Longitud de campo inválida');fields.push({id,wire,kind:'bytes',length:len});at+=len;}else if(wire===1||wire===5){const len=wire===1?8:4;if(at+len>a.length)throw Error('Campo truncado');at+=len;fields.push({id,wire,kind:'fijo',length:len});}else throw Error('Wire type no reconocido: '+wire);}return fields;}
+$('query').onclick=async()=>{const m=$('m').value.trim(),s=$('s').value.trim(),sp=$('sp').value.trim();if(!/^\d+$/.test(m)||!/^\d+$/.test(s)||!/^\d+$/.test(sp)){status('Introduce m, s y sp numéricos');return;}const q=new URLSearchParams({streamId:s,siteType:'2001',continent:'SA',country:'EC',digit:'trd',matchId:m,sportType:sp});status('Consultando API...');log(`Consulta: m=${m}, s=${s}, sp=${sp}`);try{const r=await fetch('https://apis-data-defra10.tcpwe138stya.ru/api/stream/detail?'+q,{cache:'no-store'});const bytes=new Uint8Array(await r.arrayBuffer());log(`API HTTP ${r.status}; ${bytes.length} bytes; tipo ${r.headers.get('content-type')||'desconocido'}`);if(!r.ok)throw Error('HTTP '+r.status);const plain=new TextDecoder('utf-8',{fatal:false}).decode(bytes);if(plain.includes('Stream Not Found')){status('Señal no encontrada');return;}try{const fields=parseProto(bytes);log(`Estructura binaria compatible con campos Protobuf: ${fields.length} campos de nivel superior`);for(const f of fields.slice(0,25))log(`  Campo ${f.id}: ${f.kind}, ${f.length} bytes`);status('Respuesta recibida; formato inspeccionado (sin URL validada)');}catch(e){log('No se pudo confirmar estructura Protobuf: '+e.message);log('Primeros 32 bytes (hex): '+Array.from(bytes.slice(0,32),b=>b.toString(16).padStart(2,'0')).join(' '));status('Respuesta recibida; formato no confirmado');}}catch(e){status('Error al consultar API');log(`API: ${e.message}`);}};
+$('check').onclick=async()=>{let url;try{url=getHlsUrl();}catch(e){status(e.message);return;}status('Comprobando lista...');log('Lista: '+safeUrl(url));try{const r=await fetch(url,{redirect:'follow',cache:'no-store'});log(`Resultado HTTP: ${r.status}; redirigida: ${r.redirected?'sí':'no'}`);log('Destino final: '+safeUrl(r.url));log('Tipo: '+(r.headers.get('content-type')||'desconocido'));if(!r.ok)throw Error('HTTP '+r.status);const text=await r.text();if(!text.trimStart().startsWith('#EXTM3U'))throw Error('La respuesta no comienza con #EXTM3U');log('Lista M3U8 válida; contiene '+text.split(/\r?\n/).filter(x=>x.startsWith('#EXTINF:')).length+' segmentos en esta respuesta');status('Lista HLS válida; falta comprobar sus segmentos');}catch(e){status('No se pudo validar la lista');log('Validación: '+e.message+' (puede ser CORS, redirección o respuesta no HLS)');}};
+function stop(){if(hls){hls.destroy();hls=null;}const v=$('video');v.pause();v.removeAttribute('src');v.load();}
+$('stop').onclick=()=>{stop();status('Reproducción detenida');};
+$('clear').onclick=()=>$('log').textContent='';
+$('play').onclick=()=>{let url;try{url=getHlsUrl();}catch(e){status(e.message);return;}stop();const video=$('video');status('Preparando reproducción...');log('Reproduciendo: '+safeUrl(url));if(window.Hls&&Hls.isSupported()){hls=new Hls({debug:false,enableWorker:true,lowLatencyMode:false});hls.on(Hls.Events.MEDIA_ATTACHED,()=>hls.loadSource(url));hls.on(Hls.Events.MANIFEST_PARSED,()=>{status('Lista cargada; intentando reproducir...');video.play().catch(()=>status('Pulsa Play para comenzar'));});hls.on(Hls.Events.ERROR,(_,d)=>{const r=d.response||{},c=d.context||{};log(`HLS ${d.type} / ${d.details}; fatal=${!!d.fatal}; HTTP=${r.code??'desconocido'}`);if(c.url||r.url)log('Recurso: '+safeUrl(c.url||r.url));if(d.fatal)status('Error HLS: '+d.details);});hls.attachMedia(video);}else if(video.canPlayType('application/vnd.apple.mpegurl')){video.src=url;video.play().catch(()=>status('Pulsa Play'));}else status('Este navegador no admite HLS');};
+$('video').addEventListener('playing',()=>status('Reproduciendo video'));
+$('video').addEventListener('error',()=>log('Error de video nativo: '+($('video').error?.code||'desconocido')));
+log('DT2 diagnóstico listo. La API no inicia reproducción automática.');
+</script></body></html>
