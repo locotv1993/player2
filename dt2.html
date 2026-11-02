@@ -61,10 +61,28 @@ function play(url){
         status('Video cargado');
         video.play().catch(()=>status('Pulsa Play'));
       });
-      hls.on(Hls.Events.ERROR,(_,data)=>{
-        log('HLS: '+data.details);
-        if(data.fatal) status('Error: '+data.details);
-      });
+     
+hls.on(Hls.Events.ERROR, (_, data) => {
+  const response = data.response || {};
+  const context = data.context || {};
+
+  log('--- ERROR HLS ---');
+  log('Tipo: ' + data.type);
+  log('Detalle: ' + data.details);
+  log('Fatal: ' + data.fatal);
+  log('HTTP: ' + (response.code ?? 'No disponible'));
+  log('Mensaje: ' + (response.text || 'Sin mensaje'));
+  log('Recurso: ' + (
+    context.url ||
+    response.url ||
+    'No disponible'
+  ));
+
+  if (data.fatal) {
+    status('Error HLS: ' + data.details);
+  }
+});
+
     }else if(video.canPlayType('application/vnd.apple.mpegurl')){
       video.src = u.href;
       video.play().catch(()=>status('Pulsa Play'));
