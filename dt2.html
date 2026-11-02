@@ -18,8 +18,8 @@ small{color:#8da2bf}
 </head>
 <body>
 <main>
-<h1>DT2 · Diagnóstico de señal RTV77</h1>
-<p>Prueba independiente de la consulta a <code>/api/stream/detail</code>. No modifica tu dt.html original. La API puede responder correctamente sin entregar una señal reproducible.</p>
+<h1>DT2 · Reproductor y diagnóstico</h1>
+<p>Carga automática por parámetros y diagnóstico de la API. No modifica dt.html. Si la API devuelve datos binarios o exige autorización, se mostrará el motivo sin inventar una URL.</p>
 <section>
 <div class="grid">
 <div><label for="m">Partido (m)</label><input id="m" inputmode="numeric" value="4420287"></div>
@@ -33,7 +33,7 @@ small{color:#8da2bf}
 <button id="test">Consultar API oficial</button><button id="copy" type="button">Copiar diagnóstico</button>
 <div id="status" role="status">Esperando prueba.</div>
 </section>
-<section><strong>Resultado</strong><pre id="output">Pulsa «Consultar API oficial».</pre></section>
+<section><strong>Resultado</strong><pre id="output">Esperando consulta automática…</pre></section>
 <section>
 <strong>Prueba de reproducción (URL autorizada)</strong>
 <p>Pega aquí una URL HLS (.m3u8), DASH (.mpd) o MP4 que tengas permiso para utilizar. La consulta a la API no se convierte automáticamente en una URL de video.</p>
@@ -81,9 +81,15 @@ $('test').onclick=async()=>{
   catch{add('JSON válido: NO (aunque el encabezado indique application/json)');}
   const preview=decoded.slice(0,1800).replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,'·');
   add('Vista previa (máx. 1800 caracteres):\n'+preview);
+  if(json){
+    const candidates=[json?.url,json?.streamUrl,json?.playUrl,json?.data?.url,json?.data?.streamUrl,json?.data?.playUrl,json?.data?.mil,json?.mil];
+    const media=candidates.find(x=>typeof x==='string' && /^https:\/\/[^\s]+/i.test(x) && /\.(m3u8|mpd|mp4)(?:[?#]|$)/i.test(x));
+    if(media){$('media').value=media;$('play').click();add('Fuente multimedia reconocida: reproducción iniciada.');}
+    else add('No se encontró una URL HLS/DASH/MP4 directa en los campos JSON conocidos.');
+  }
   if(!r.ok){$('status').innerHTML='<span class="bad">El servidor respondió con error HTTP.</span>';}
   else if(json){$('status').innerHTML='<span class="ok">Consulta correcta. Respuesta JSON.</span>';}
-  else{$('status').innerHTML='<span class="warn">Consulta correcta; respuesta no es JSON estándar. Hace falta conocer el formato.</span>';}
+  else{$('status').innerHTML='<span class="warn">La API devolvió datos no JSON. No se puede reproducir esta señal automáticamente sin el formato y acceso admitidos por el proveedor.</span>';}
  }catch(e){add('Error de red/CORS: '+e.message);$('status').innerHTML='<span class="bad">No se pudo consultar desde este dominio.</span>';}
  finally{$('test').disabled=false;}
 };
@@ -101,6 +107,11 @@ $('play').onclick=()=>{
   else{v.src=url;v.play().catch(()=>{});}
  }catch(e){$('playstatus').textContent=e.message;}
 };
+if(q.has('url')){
+ const raw=q.get('url');
+ try{const u=new URL(raw);if(u.protocol==='https:' || u.protocol==='http:'){$('media').value=u.href;$('play').click();}}catch{}
+}
+if(q.has('m')&&q.has('s')) $('test').click();
 </script>
 </body>
 </html>
