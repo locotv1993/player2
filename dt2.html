@@ -1,117 +1,206 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>DT2 · Prueba de señales</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DT2 - Reproductor</title>
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
 <style>
-*{box-sizing:border-box}body{margin:0;background:#090d16;color:#eef2ff;font:15px system-ui,Arial;padding:18px}
-main{max-width:850px;margin:auto}h1{font-size:22px;margin:8px 0}p{color:#aab7d0;line-height:1.5}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(145px,1fr));gap:10px}
-label{display:block;font-size:12px;color:#b6c4dc;margin-bottom:5px}input{width:100%;background:#141e30;color:white;border:1px solid #34415a;border-radius:9px;padding:11px}
-button{background:#3b82f6;color:white;border:0;border-radius:10px;padding:12px 18px;font-weight:700;cursor:pointer;margin:12px 8px 12px 0}
-button:disabled{opacity:.5}section{background:#111a29;border:1px solid #27344a;border-radius:12px;padding:15px;margin-top:14px}
-pre{white-space:pre-wrap;overflow-wrap:anywhere;max-height:340px;overflow:auto;font-size:12px;color:#b7e4cc}
-.ok{color:#4ade80}.bad{color:#fb7185}.warn{color:#facc15}video{display:block;width:100%;aspect-ratio:16/9;background:black;border-radius:8px}
-small{color:#8da2bf}
+*{box-sizing:border-box}
+html,body{margin:0;background:#080b12;color:#fff;font:15px Arial}
+main{max-width:960px;margin:auto;padding:15px}
+video{width:100%;aspect-ratio:16/9;background:#000}
+#status{padding:15px;font-weight:bold}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#151c29;padding:12px;border-radius:8px}
+input{width:100%;padding:12px;background:#151c29;color:white;border:1px solid #555}
+button{padding:12px;background:#2563eb;color:white;border:0;margin-top:8px}
 </style>
 </head>
 <body>
 <main>
-<h1>DT2 · Reproductor y diagnóstico</h1>
-<p>Carga automática por parámetros y diagnóstico de la API. No modifica dt.html. Si la API devuelve datos binarios o exige autorización, se mostrará el motivo sin inventar una URL.</p>
-<section>
-<div class="grid">
-<div><label for="m">Partido (m)</label><input id="m" inputmode="numeric" value="4420287"></div>
-<div><label for="s">Señal (s)</label><input id="s" inputmode="numeric" value="914599"></div>
-<div><label for="sp">Deporte (sp)</label><input id="sp" inputmode="numeric" value="1"></div>
-<div><label for="site">siteType</label><input id="site" inputmode="numeric" value="2001"></div>
-<div><label for="continent">Continente</label><input id="continent" value="SA"></div>
-<div><label for="country">País</label><input id="country" value="EC"></div>
-<div><label for="digit">digit</label><input id="digit" value="trd"></div>
-</div>
-<button id="test">Consultar API oficial</button><button id="copy" type="button">Copiar diagnóstico</button>
-<div id="status" role="status">Esperando prueba.</div>
-</section>
-<section><strong>Resultado</strong><pre id="output">Esperando consulta automática…</pre></section>
-<section>
-<strong>Prueba de reproducción (URL autorizada)</strong>
-<p>Pega aquí una URL HLS (.m3u8), DASH (.mpd) o MP4 que tengas permiso para utilizar. La consulta a la API no se convierte automáticamente en una URL de video.</p>
-<input id="media" placeholder="https://ejemplo.com/stream.m3u8">
-<button id="play">Probar reproducción</button>
-<video id="video" controls playsinline></video>
-<small id="playstatus">Sin señal cargada.</small>
-</section>
+<h3>DT2 - Prueba de reproducción</h3>
+<video id="video" controls playsinline autoplay></video>
+<div id="status">Iniciando...</div>
+<p id="info"></p>
+<input id="url" placeholder="URL HLS autorizada (opcional)">
+<button onclick="play(document.getElementById('url').value)">Reproducir</button>
+<pre id="log"></pre>
 </main>
-<script src="https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.min.js"></script>
-<script src="https://cdn.dashjs.org/latest/dash.all.min.js"></script>
 <script>
-const $=id=>document.getElementById(id);
-const q=new URLSearchParams(location.search);
-for(const [key,id] of [['m','m'],['s','s'],['sp','sp'],['site','site'],['continent','continent'],['country','country'],['digit','digit']]){
- if(q.has(key))$(id).value=q.get(key);
+const $ = id => document.getElementById(id);
+const p = new URLSearchParams(location.search);
+const m = p.get('m') || '4398539';
+const s = p.get('s') || '914533';
+const sp = p.get('sp') || '1';
+let hls;
+
+$('info').textContent = `Partido: ${m} | Señal: ${s} | Deporte: ${sp}`;
+
+function log(t){
+  $('log').textContent += t + '\n';
 }
-const report=[];
-function add(msg){report.push(msg);$('output').textContent=report.join('\n');}
-function getUrl(){
- const u=new URL('https://apis-data-defra10.tcpwe138stya.ru/api/stream/detail');
- for(const [from,to] of [['s','streamId'],['site','siteType'],['continent','continent'],['country','country'],['digit','digit'],['m','matchId'],['sp','sportType']]){
-  u.searchParams.set(to,$(from).value.trim());
- }
- return u;
+function status(t){
+  $('status').textContent = t;
 }
-$('test').onclick=async()=>{
- $('test').disabled=true;report.length=0;$('status').textContent='Consultando…';
- const u=getUrl();
- history.replaceState(null,'',location.pathname+'?'+new URLSearchParams({m:$('m').value,s:$('s').value,sp:$('sp').value}));
- add('Endpoint: '+u.origin+u.pathname);
- add('Parámetros: '+u.searchParams.toString());
- try{
-  const r=await fetch(u,{method:'GET',mode:'cors',cache:'no-store',headers:{Accept:'application/json, text/plain, */*'}});
-  add('HTTP: '+r.status+' '+r.statusText);
-  add('Content-Type: '+(r.headers.get('content-type')||'(sin indicar)'));
-  const buf=await r.arrayBuffer();
-  const bytes=new Uint8Array(buf);
-  add('Tamaño: '+bytes.length+' bytes');
-  const decoded=new TextDecoder('utf-8',{fatal:false}).decode(bytes);
-  const replacement=(decoded.match(/\uFFFD/g)||[]).length;
-  add('Caracteres de reemplazo UTF-8: '+replacement);
-  let json;
-  try{json=JSON.parse(decoded);add('JSON válido: SÍ');add('Claves raíz: '+Object.keys(json).join(', '));}
-  catch{add('JSON válido: NO (aunque el encabezado indique application/json)');}
-  const preview=decoded.slice(0,1800).replace(/[\x00-\x08\x0b\x0c\x0e-\x1f]/g,'·');
-  add('Vista previa (máx. 1800 caracteres):\n'+preview);
-  if(json){
-    const candidates=[json?.url,json?.streamUrl,json?.playUrl,json?.data?.url,json?.data?.streamUrl,json?.data?.playUrl,json?.data?.mil,json?.mil];
-    const media=candidates.find(x=>typeof x==='string' && /^https:\/\/[^\s]+/i.test(x) && /\.(m3u8|mpd|mp4)(?:[?#]|$)/i.test(x));
-    if(media){$('media').value=media;$('play').click();add('Fuente multimedia reconocida: reproducción iniciada.');}
-    else add('No se encontró una URL HLS/DASH/MP4 directa en los campos JSON conocidos.');
+function play(url){
+  try{
+    const u = new URL(url);
+    if(!['https:','http:'].includes(u.protocol))
+      throw Error('URL inválida');
+
+    const video = $('video');
+    if(hls) hls.destroy();
+
+    status('Cargando video...');
+    if(Hls.isSupported()){
+      hls = new Hls();
+      hls.loadSource(u.href);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED,()=>{
+        status('Video cargado');
+        video.play().catch(()=>status('Pulsa Play'));
+      });
+      hls.on(Hls.Events.ERROR,(_,data)=>{
+        log('HLS: '+data.details);
+        if(data.fatal) status('Error: '+data.details);
+      });
+    }else if(video.canPlayType('application/vnd.apple.mpegurl')){
+      video.src = u.href;
+      video.play().catch(()=>status('Pulsa Play'));
+    }else{
+      status('Navegador sin soporte HLS');
+    }
+  }catch(e){
+    status('URL no válida');
+    log(e.message);
   }
-  if(!r.ok){$('status').innerHTML='<span class="bad">El servidor respondió con error HTTP.</span>';}
-  else if(json){$('status').innerHTML='<span class="ok">Consulta correcta. Respuesta JSON.</span>';}
-  else{$('status').innerHTML='<span class="warn">La API devolvió datos no JSON. No se puede reproducir esta señal automáticamente sin el formato y acceso admitidos por el proveedor.</span>';}
- }catch(e){add('Error de red/CORS: '+e.message);$('status').innerHTML='<span class="bad">No se pudo consultar desde este dominio.</span>';}
- finally{$('test').disabled=false;}
-};
-$('copy').onclick=()=>navigator.clipboard.writeText(report.join('\n')).then(()=>{$('copy').textContent='¡Copiado!';}).catch(()=>alert('Selecciona y copia el texto del diagnóstico.'));
-let hls,dash;
-$('play').onclick=()=>{
- const url=$('media').value.trim(),v=$('video');if(!/^https?:\/\//i.test(url)){alert('Introduce una URL http(s) válida.');return;}
- if(hls){hls.destroy();hls=null;}if(dash){dash.reset();dash=null;}v.removeAttribute('src');v.load();
- $('playstatus').textContent='Intentando cargar…';
- v.onerror=()=>$('playstatus').textContent='Error de reproducción. Revisa CORS, formato y permisos.';
- try{
-  if(/\.m3u8(?:[?#]|$)/i.test(url)&&v.canPlayType('application/vnd.apple.mpegurl')){v.src=url;v.play().catch(()=>{});}
-  else if(/\.m3u8(?:[?#]|$)/i.test(url)&&window.Hls&&Hls.isSupported()){hls=new Hls();hls.loadSource(url);hls.attachMedia(v);hls.on(Hls.Events.MANIFEST_PARSED,()=>v.play().catch(()=>{}));hls.on(Hls.Events.ERROR,(_,d)=>{$('playstatus').textContent='HLS: '+d.details;});}
-  else if(/\.mpd(?:[?#]|$)/i.test(url)&&window.dashjs){dash=dashjs.MediaPlayer().create();dash.initialize(v,url,true);}
-  else{v.src=url;v.play().catch(()=>{});}
- }catch(e){$('playstatus').textContent=e.message;}
-};
-if(q.has('url')){
- const raw=q.get('url');
- try{const u=new URL(raw);if(u.protocol==='https:' || u.protocol==='http:'){$('media').value=u.href;$('play').click();}}catch{}
 }
-if(q.has('m')&&q.has('s')) $('test').click();
+
+function rot47(t){
+  return t.replace(/[!-~]/g,c=>
+    String.fromCharCode(33+(c.charCodeAt(0)-33+47)%94)
+  );
+}
+
+function readVarint(a,pos){
+  let n=0,shift=0;
+  for(let i=0;i<10;i++){
+    if(pos>=a.length) throw Error('Datos incompletos');
+    const b=a[pos++];
+    n+=(b&127)*2**shift;
+    if(!(b&128)) return [n,pos];
+    shift+=7;
+  }
+  throw Error('Varint inválido');
+}
+
+function parseFields(bytes){
+  const out=[];
+  let i=0;
+  while(i<bytes.length){
+    let tag;
+    [tag,i]=readVarint(bytes,i);
+    const id=Math.floor(tag/8);
+    const wire=tag%8;
+    if(!id || id>10000) throw Error('Campo inválido');
+
+    if(wire===0){
+      let value;
+      [value,i]=readVarint(bytes,i);
+      out.push({id,value});
+    }else if(wire===2){
+      let len;
+      [len,i]=readVarint(bytes,i);
+      if(len>bytes.length-i) throw Error('Longitud inválida');
+      out.push({id,value:bytes.slice(i,i+len)});
+      i+=len;
+    }else if(wire===1 || wire===5){
+      i+=wire===1?8:4;
+      if(i>bytes.length) throw Error('Campo truncado');
+    }else{
+      throw Error('Formato no reconocido');
+    }
+  }
+  return out;
+}
+
+function extractStrings(bytes,depth=0){
+  const found=[];
+  try{
+    for(const field of parseFields(bytes)){
+      if(!(field.value instanceof Uint8Array)) continue;
+      const str=new TextDecoder().decode(field.value);
+      if(str.length>3) found.push(str);
+      if(depth<3)
+        found.push(...extractStrings(field.value,depth+1));
+    }
+  }catch(e){}
+  return found;
+}
+
+async function init(){
+  const q=new URLSearchParams({
+    streamId:s,
+    siteType:p.get('siteType')||'2001',
+    continent:p.get('continent')||'SA',
+    country:p.get('country')||'EC',
+    digit:p.get('digit')||'trd',
+    matchId:m,
+    sportType:sp
+  });
+
+  const endpoint='https://apis-data-defra10.tcpwe138stya.ru/api/stream/detail?'+q;
+
+  status('Consultando señal...');
+  log('Partido '+m+' - Señal '+s);
+
+  try{
+    const r=await fetch(endpoint,{cache:'no-store'});
+    const bytes=new Uint8Array(await r.arrayBuffer());
+    log('HTTP: '+r.status+' | Bytes: '+bytes.length);
+
+    if(!r.ok) throw Error('HTTP '+r.status);
+
+    const text=new TextDecoder().decode(bytes);
+
+    if(text.includes('Stream Not Found')){
+      status('Señal no encontrada');
+      return;
+    }
+
+    const strings=extractStrings(bytes);
+    log('Datos extraídos: '+strings.length);
+
+    const urls=[];
+    for(const str of strings){
+      for(const value of [
+        str,rot47(str),
+        str.slice(8),rot47(str).slice(8),
+        rot47(str.slice(8))
+      ]){
+        for(const match of value.matchAll(/https?:\/\/[^\s"'<>\\]+/g)){
+          if(!urls.includes(match[0])) urls.push(match[0]);
+        }
+      }
+    }
+
+    const media=urls.find(u=>/\.m3u8(?:[?#]|$)/i.test(u));
+
+    if(media){
+      status('Intentando reproducir...');
+      play(media);
+    }else{
+      status('Respuesta recibida, sin URL HLS directa');
+      log('URLs detectadas: '+urls.length);
+      log('La señal podría requerir autorización adicional.');
+    }
+  }catch(e){
+    status('Error al consultar la señal');
+    log(e.message);
+  }
+}
+init();
 </script>
 </body>
 </html>
